@@ -1,0 +1,17 @@
+Install From Here:
+
+https://github.com/facebookresearch/fastText
+
+Run on the Command Line.
+
+$ ./fasttext supervised -input '../data/merged_train_data.txt' -output '../data/model_2'
+Read 5M words
+Number of words:  283165
+Number of labels: 2
+Progress: 100.0%  words/sec/thread: 3282636  lr: 0.000000  loss: 0.419597  eta: 0h0m 
+
+$ ./fasttext test '../data/model_2.bin' '../data/merged_test_data.txt'
+P@1: 0.858
+R@1: 0.858
+Number of examples: 25000
+MacBook-Pro-4:fastText matthewdunn$ 
