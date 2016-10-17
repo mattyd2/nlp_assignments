@@ -1,0 +1,61 @@
+max_document_length 56
+Vocabulary Size: 18758
+Train/Dev split: 8635/960/1067
+W.get_shape() (18758, 64)
+self.input_x.get_shape() (?, 56)
+self.embedded_chars (?, 56, 64)
+
+
+CONV2D:
+
+    INPUT:
+        self.embedded_chars_expanded 
+        (?, 56, 64, 1)
+        (batch, in_height, in_width, in_channels)
+
+    W/Filter:
+        filter_shape 
+        [3, 64, 1, 64]
+        [filter_height, filter_width, in_channels, out_channels]
+
+    tf.nn.conv2d Process
+        1. Flattens W/Filter shape to:
+            a. [filter_height * filter_width * in_channels, output_channels]
+            b. [3 * 64 * 1, 64] = [192, 64]
+        2. Extract image patches from tensor to form virtual tensor of shape:
+            a. [batch, out_height, out_width, filter_height * filter_width * in_channels]
+            b. [?, 56, 64, 192]
+        3. For each patch, right-multiplies the filter matrix and the image patch vector
+            a. [?, 56, 64, 192] * [192, 64]
+
+    OUTPUT:
+        conv Tensor("conv-maxpool-3/conv:0", shape=(?, 54, 1, 64), dtype=float32)
+        bias Tensor("conv-maxpool-3/BiasAdd:0", shape=(?, 54, 1, 64), dtype=float32)
+        h Tensor("conv-maxpool-3/reclu:0", shape=(?, 54, 1, 64), dtype=float32)
+
+CONV2D:
+
+    INPUT:
+        (?, 52, 1, 64)
+        (batch, in_height, in_width, in_channels)
+
+    W/Filter:
+        a. filter_shape 
+        b. [3, 64, 1, 64]??
+        c. [filter_height, filter_width, in_channels, out_channels]
+        d. [3 * 64 * 1, 64] = [192, 64]
+    IMAGE PATCHES:
+        a. [?, 52, 1, 64]
+        b. [batch, out_height, out_width, filter_height * filter_width * in_channels]
+        c. [?, 52, 64, 52 * 1 * 64] = [?, 52, 64, 3328]
+    
+
+MAX POOLING:
+
+    INPUT:
+        h Tensor("conv-maxpool-3/reclu:0", shape=(?, 54, 1, 64), dtype=float32)
+    KSIZE:
+        A list of ints that has length >=4. The size of the window for each dimension of the input tensor.
+            a. [1, sequence_length - filter_size + 1, 1, 1] - we make it the same size of the output from the CONV2D.
+    OUTPUT:
+        pool1 Tensor("pool1:0", shape=(?, 1, 1, 64), dtype=float32)        

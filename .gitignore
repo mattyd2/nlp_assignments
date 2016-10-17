@@ -4,3 +4,10 @@ A2/src/data/
 A1/data/
 test/runs/
 A2/data/
+
+A2/Terminal Saved Output
+
+*.zip
+*.ipynb_checkpoints
+*.pyc
+.DS_store
