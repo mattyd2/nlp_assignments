@@ -1,4 +1,3 @@
-import fasttext as ft
 import os
 import pandas as pd
 import numpy as np
@@ -50,22 +49,6 @@ def merge_data(data_set_type):
     final = pd.concat(df_to_concat, axis=0)
     final.to_csv('../data/merged_' + data_set_type +
                  '_data.txt', index=False, sep='\n', encoding='utf-8')
-    # return final
-
-
-def runfasttext():
-    classifier = ft.cbow('../data/merged_train_data.txt', 'model', lr=0.1, dim=128, loss='softmax')
-    # result = classifier.test('../data/merged_test_data.txt')
-    # print 'P@1:', result.precision
-    # print 'R@1:', result.recall
-    # print 'Number of examples:', result.nexamples
-# classifier = ft.supervised('train.txt', 'model', label_prefix='__myprefix__',
-#                            thread=4)
 
 if __name__ == '__main__':
     create_merge_files()
-    # start = time.time()
-    # runfasttext()
-    # end = time.time()
-    # print('Run Fast Text')
-    # print(end - start)
