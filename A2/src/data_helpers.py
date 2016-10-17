@@ -39,6 +39,14 @@ def get_prepared_data(max_sentence_length, nb_grams):
 
 
 def load_data_and_labels(data_set_type, nb_grams):
+    '''
+    Params:
+        data_set_type: either 'train' or 'test'
+        nb_grams: number of n_grams to create 1-3
+    Returns:
+        x: raw text mapped to oov
+        y: labels as [0, 1] vectorgi
+    '''
     if data_set_type == 'train':
         # loaded = merge_data(data_set_type)
         loaded = pd.read_csv('../data/merged_train_data.csv')
@@ -53,6 +61,12 @@ def load_data_and_labels(data_set_type, nb_grams):
 
 
 def concate_n_grams(x_text, nb_grams):
+    '''
+    Params:
+        Pandas Series of text.
+    Returns:
+        Pandas Series with n_grams merged together.
+    '''
     mapped_oov = build_oov(x_text, nb_grams)
     if nb_grams == 1:
         return mapped_oov[0]
@@ -67,6 +81,12 @@ def concate_n_grams(x_text, nb_grams):
 
 
 def build_oov(x_text, nb_grams):
+    '''
+    Params:
+        Pandas Series of raw text to be mapped to oov
+    Returns:
+        List of Pandas Series with raw text mapped to oov
+    '''
     docs_grammed = get_grams(x_text, nb_grams)
     vocab_sets = build_dictionaries(docs_grammed, nb_grams)
     mapped_oov = []
@@ -93,6 +113,12 @@ def check_oov(x, j):
 
 
 def get_grams(x_text, nb_grams):
+    '''
+    Params:
+        Pandas Series with raw text to be converted into n_grams
+    Returns:
+        List of Pandas Series with n_grams created.
+    '''
     grammed_docs = []
     cleaned = clean_str(x_text)
     for i in range(0, nb_grams):
@@ -134,12 +160,15 @@ def clean_str(x_text):
 
 
 def build_dictionaries(docs_grammed, nb_grams):
-    # vocab_sizes = [10000, 5000, 2500]
+    '''
+    Params:
+        docs_grammed: tokenized documents with nb_grams tokens
+        nb_grams: number of different n_grams to create
+    Returns:
+        list of vocab dictionaries for different n_gram sizes
+    '''
     vocab_sizes = [10000, 5000, 2500]
-    # nb_grams = nb_grams-1
-    print('nb_grams', nb_grams)
     vocab_sizes = vocab_sizes[:nb_grams]
-    print('vocab_sizes', vocab_sizes)
     vocab_sets = []
     for doc, size in zip(docs_grammed, vocab_sizes[:nb_grams]):
         vocab = build_vocabs(doc)
@@ -166,7 +195,7 @@ def build_dictionary(vocab, vocabulary_size):
         vocab: tokenized list of all the vocab in the vocabulary.
         vocabularly_size: max number of terms to be extracted from vocab
     Returns:
-        vocabulary with only the top
+        set object with only top vocabulary words as defined by vocabulary_size
     '''
     # print(vocab)
     count = [['UNK', -1]]
@@ -191,8 +220,13 @@ def build_labels(y):
     return np.array(y_labels)
 
 
-# helper function for concatenating n_grams
 def to_list(x):
+    '''
+    Params:
+        list of n_grams together
+    Returns:
+        one list of n_grams concatenated together
+    '''
     grams = []
     for i in x:
         tmp = ''.join(i)
@@ -221,6 +255,11 @@ def batch_iter(data, batch_size, num_epochs, shuffle=True):
 
 
 def create_merge_files():
+    '''
+    Checks if the merge files already exist and creates if not.
+    Params: n/a
+    Returns: n/a
+    '''
     data_set_types = ['train', 'test']
     file_types = ['../data/merged_train_data.csv',
                    '../data/merged_test_data.csv']
@@ -233,6 +272,12 @@ def create_merge_files():
 
 
 def merge_data(data_set_type):
+    '''
+    Params:
+        data_set_type is either 'train' or 'test'
+    Returns:
+        nothing, creates csv file
+    '''
     neg_path = '../data/aclImdb/' + data_set_type + '/neg/'
     pos_path = '../data/aclImdb/' + data_set_type + '/pos/'
     paths = [neg_path, pos_path]
@@ -267,6 +312,12 @@ def merge_data(data_set_type):
 
 
 def get_prefix(nb_grams):
+    '''
+    Params:
+        nb_grams: the number of n_grams to create
+    Returns:
+        String prefix to use in file creation.
+    '''
     if nb_grams == 1:
         abbreviation = 'uni_'
     elif nb_grams == 2:

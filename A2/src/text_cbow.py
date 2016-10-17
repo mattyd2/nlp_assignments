@@ -46,19 +46,19 @@ class cbow(object):
             self.h_drop_1 = tf.nn.dropout(
                 self.hidden_1, self.dropout_keep_prob)
 
-        # hidden layer #2
-        with tf.name_scope("hidden_layer_2"):
-            W = tf.Variable(tf.truncated_normal(
-                [embedding_size, hidden_size], stddev=0.1), name="W")
-            b = tf.Variable(tf.constant(0.1, shape=[hidden_size]), name="b")
-            self.scores_hidden_2 = tf.nn.xw_plus_b(
-                self.h_drop_1, W, b, name="scores")
-            self.hidden_2 = tf.nn.relu(self.scores_hidden_2, name="relu")
+        # # hidden layer #2
+        # with tf.name_scope("hidden_layer_2"):
+        #     W = tf.Variable(tf.truncated_normal(
+        #         [hidden_size, hidden_size], stddev=0.1), name="W")
+        #     b = tf.Variable(tf.constant(0.1, shape=[hidden_size]), name="b")
+        #     self.scores_hidden_2 = tf.nn.xw_plus_b(
+        #         self.h_drop_1, W, b, name="scores")
+        #     self.hidden_2 = tf.nn.relu(self.scores_hidden_2, name="relu")
 
-        # dropout #2
-        with tf.name_scope("dropout_2"):
-            self.h_drop_2 = tf.nn.dropout(
-                self.hidden_2, self.dropout_keep_prob)
+        # # dropout #2
+        # with tf.name_scope("dropout_2"):
+        #     self.h_drop_2 = tf.nn.dropout(
+        #         self.hidden_2, self.dropout_keep_prob)
 
         # Final (unnormalized) scores and predictions
         with tf.name_scope("output"):
@@ -69,7 +69,7 @@ class cbow(object):
             b = tf.Variable(tf.constant(0.1, shape=[num_classes]), name="b")
             l2_loss += tf.nn.l2_loss(W)
             l2_loss += tf.nn.l2_loss(b)
-            self.scores = tf.nn.xw_plus_b(self.h_drop_2, W, b, name="scores")
+            self.scores = tf.nn.xw_plus_b(self.h_drop_1, W, b, name="scores")
             self.predictions = tf.argmax(self.scores, 1, name="predictions")
 
         # Calculate Mean cross-entropy loss

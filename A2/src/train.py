@@ -20,7 +20,7 @@ tf.flags.DEFINE_integer("embedding_dim", 128,
                         "Dimensionality of character embedding (default: 128)")
 tf.flags.DEFINE_integer("max_sentence_length", 100,
                         "The maximum sentence length.")
-tf.flags.DEFINE_integer("hidden_layer_size", 2000,
+tf.flags.DEFINE_integer("hidden_layer_size", 1000,
                         "Dimension of the hidden layer")
 tf.flags.DEFINE_float("dropout_keep_prob", 0.5,
                       "Dropout keep probability (default: 0.5)")

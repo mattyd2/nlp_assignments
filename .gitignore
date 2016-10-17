@@ -11,3 +11,12 @@ A2/Terminal Saved Output
 *.ipynb_checkpoints
 *.pyc
 .DS_store
+*.bin
+
+A2/src/model.bin
+
+*.vec
+
+A2/consol outputs
+
+A2/src/model.vec
