@@ -1,0 +1,236 @@
+++++++++
+
+One hidden layer with dropout
+
+Parameters:
+N_GRAMS=3
+ALLOW_SOFT_PLACEMENT=True
+BATCH_SIZE=64
+CHECKPOINT_EVERY=200
+DROPOUT_KEEP_PROB=0.5
+EMBEDDING_DIM=128
+EVALUATE_EVERY=200
+HIDDEN_LAYER_SIZE=2000
+L2_REG_LAMBDA=1
+LOG_DEVICE_PLACEMENT=False
+MAX_SENTENCE_LENGTH=100
+NUM_EPOCHS=50
+PATIENCE_WAIT=600
+VALIDATE_EVERY=200
+
+('../data/merged_train_data.csv', ' already exists...')
+('../data/merged_test_data.csv', ' already exists...')
+Getting PICKLES...
+Time to Retrieve Pickles...
+3.4553399086
+Writing to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392
+
+
+Validation Evaluation:
+2016-10-17T10:43:37.552554: step 200, loss 0.415872, acc 0.8492
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392/checkpoints/model-200
+
+
+Validation Evaluation:
+2016-10-17T10:44:02.272239: step 400, loss 0.342354, acc 0.864
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392/checkpoints/model-400
+
+
+Validation Evaluation:
+2016-10-17T10:44:26.741177: step 600, loss 0.333012, acc 0.8688
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392/checkpoints/model-600
+
+
+Validation Evaluation:
+2016-10-17T10:44:51.349837: step 800, loss 0.334031, acc 0.8772
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392/checkpoints/model-800
+
+
+Validation Evaluation:
+2016-10-17T10:45:18.409177: step 1000, loss 0.40052, acc 0.8664
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392/checkpoints/model-1000
+
+
+Validation Evaluation:
+2016-10-17T10:45:43.913401: step 1200, loss 0.370955, acc 0.8792
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392/checkpoints/model-1200
+
+
+Validation Evaluation:
+2016-10-17T10:46:08.723824: step 1400, loss 0.357976, acc 0.8616
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392/checkpoints/model-1400
+
+
+Validation Evaluation:
+2016-10-17T10:46:33.643196: step 1600, loss 0.543124, acc 0.852
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392/checkpoints/model-1600
+
+
+Validation Evaluation:
+2016-10-17T10:46:58.319349: step 1800, loss 0.426959, acc 0.8748
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392/checkpoints/model-1800
+
+
+Validation Evaluation:
+2016-10-17T10:47:22.905879: step 2000, loss 0.41668, acc 0.876
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392/checkpoints/model-2000
+
+
+Validation Evaluation:
+2016-10-17T10:47:47.690633: step 2200, loss 0.448775, acc 0.8736
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392/checkpoints/model-2200
+
+
+Validation Evaluation:
+2016-10-17T10:48:12.364499: step 2400, loss 0.426852, acc 0.874
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392/checkpoints/model-2400
+
+
+Validation Evaluation:
+2016-10-17T10:48:37.313986: step 2600, loss 0.583797, acc 0.8488
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476715392/checkpoints/model-2600
+
+
+Test Set Evaluation:
+2016-10-17T10:48:42.003142: step 2600, loss 0.693009, acc 0.81564
+
+Time to Process Data...
+328.046746969
+MacBook-Pro-4:src matthewdunn$ 
+
+++++++++
+
+Two Hidden Layers with Two Dropout Layers
+
+Parameters:
+N_GRAMS=3
+ALLOW_SOFT_PLACEMENT=True
+BATCH_SIZE=64
+CHECKPOINT_EVERY=200
+DROPOUT_KEEP_PROB=0.5
+EMBEDDING_DIM=128
+EVALUATE_EVERY=200
+HIDDEN_LAYER_SIZE=2000
+L2_REG_LAMBDA=1
+LOG_DEVICE_PLACEMENT=False
+MAX_SENTENCE_LENGTH=100
+NUM_EPOCHS=50
+PATIENCE_WAIT=600
+VALIDATE_EVERY=200
+
+('../data/merged_train_data.csv', ' already exists...')
+('../data/merged_test_data.csv', ' already exists...')
+Getting PICKLES...
+Time to Retrieve Pickles...
+3.58900403976
+Writing to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465
+
+
+Validation Evaluation:
+2016-10-17T10:28:34.817311: step 200, loss 0.648363, acc 0.6996
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-200
+
+
+Validation Evaluation:
+2016-10-17T10:29:20.310232: step 400, loss 0.486908, acc 0.8264
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-400
+
+
+Validation Evaluation:
+2016-10-17T10:30:07.021150: step 600, loss 0.405214, acc 0.844
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-600
+
+
+Validation Evaluation:
+2016-10-17T10:30:54.993068: step 800, loss 0.386049, acc 0.8508
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-800
+
+
+Validation Evaluation:
+2016-10-17T10:31:40.274943: step 1000, loss 0.37989, acc 0.8252
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-1000
+
+
+Validation Evaluation:
+2016-10-17T10:32:27.990234: step 1200, loss 0.444024, acc 0.8744
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-1200
+
+
+Validation Evaluation:
+2016-10-17T10:33:16.025041: step 1400, loss 0.444912, acc 0.8744
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-1400
+
+
+Validation Evaluation:
+2016-10-17T10:34:08.371058: step 1600, loss 0.529006, acc 0.8528
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-1600
+
+
+Validation Evaluation:
+2016-10-17T10:34:55.611602: step 1800, loss 0.492335, acc 0.8764
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-1800
+
+
+Validation Evaluation:
+2016-10-17T10:35:42.164735: step 2000, loss 0.604095, acc 0.8456
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-2000
+
+
+Validation Evaluation:
+2016-10-17T10:36:30.213593: step 2200, loss 0.619952, acc 0.8676
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-2200
+
+
+Validation Evaluation:
+2016-10-17T10:37:16.966663: step 2400, loss 0.527131, acc 0.8704
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-2400
+
+
+Validation Evaluation:
+2016-10-17T10:38:03.003248: step 2600, loss 0.858719, acc 0.8644
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-2600
+
+
+Validation Evaluation:
+2016-10-17T10:38:47.790264: step 2800, loss 0.840409, acc 0.8708
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-2800
+
+
+Validation Evaluation:
+2016-10-17T10:39:31.720199: step 3000, loss 1.0823, acc 0.84
+
+Saved model checkpoint to /Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A2/src/runs/1476714465/checkpoints/model-3000
+
+
+Test Set Evaluation:
+2016-10-17T10:39:42.704491: step 3000, loss 1.05406, acc 0.8338
+
+Time to Process Data...
+715.484091043

@@ -18,9 +18,9 @@ from tensorflow.contrib import learn
 # Model Hyperparameters
 tf.flags.DEFINE_integer("embedding_dim", 128,
                         "Dimensionality of character embedding (default: 128)")
-tf.flags.DEFINE_integer("max_sentence_length", 100,
+tf.flags.DEFINE_integer("max_sentence_length", 300,
                         "The maximum sentence length.")
-tf.flags.DEFINE_integer("hidden_layer_size", 1000,
+tf.flags.DEFINE_integer("hidden_layer_size", 20000,
                         "Dimension of the hidden layer")
 tf.flags.DEFINE_float("dropout_keep_prob", 0.5,
                       "Dropout keep probability (default: 0.5)")
@@ -63,26 +63,36 @@ print("")
 # Data Preparatopn
 # ==================================================
 
-# # create the merge files if they don't already exist
+# create the merge files if they don't already exist
 dh.create_merge_files()
 
-# # get the prepared data
-# start = time.time()
-# x_train, y_train, x_val, y_val, x_test, y_test, vocab_processor = dh.get_prepared_data(
-#     FLAGS.max_sentence_length, FLAGS.N_grams)
-# end = time.time()
-# print('Time to Process Data...')
-# print(end - start)
-
-# to_pickle = [x_train, y_train, x_val, y_val, x_test, y_test, vocab_processor]
 labels = ['x_train', 'y_train', 'x_val', 'y_val', 'x_test', 'y_test', 'vocab_processor']
-# dh.pickle_data(to_pickle, labels, FLAGS.N_grams)
+
+
+def re_pickle():
+    # get the prepared data
+    start = time.time()
+    x_train, y_train, x_val, y_val, x_test, y_test, vocab_processor = dh.get_prepared_data(
+        FLAGS.max_sentence_length, FLAGS.N_grams)
+    end = time.time()
+    print('Time to Process Data...')
+    print(end - start)
+    to_pickle = [x_train, y_train, x_val, y_val, x_test, y_test, vocab_processor]
+    dh.pickle_data(to_pickle, labels, FLAGS.N_grams)
+
+# comment out this line to load data from pickle files
+# re_pickle()
 
 start = time.time()
 x_train, y_train, x_val, y_val, x_test, y_test, vocab_processor = dh.get_pickled_data(labels, FLAGS.N_grams)
 end = time.time()
 print('Time to Retrieve Pickles...')
 print(end - start)
+
+values = [x_train, y_train, x_val, y_val, x_test, y_test]
+
+for i in values:
+    print(i.shape)
 
 # Training
 # ==================================================
