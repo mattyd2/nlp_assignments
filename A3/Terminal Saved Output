@@ -1,0 +1,715 @@
+Last login: Fri Nov  4 15:50:15 on ttys000
+MacBook-Pro-5:~ matthewdunn$ cd Dropbox/NYU/fall2016/nlp/nlp_assignments/A3
+MacBook-Pro-5:A3 matthewdunn$ ls
+07 Solved.ipynb		A3.zip			simple-examples.tgz
+A3.2.1			nlp_refs.rtf
+A3.pdf			ptb
+MacBook-Pro-5:A3 matthewdunn$ cd ptb
+MacBook-Pro-5:ptb matthewdunn$ ls
+BUILD
+__init__.py
+baseline_gru_batch_size_100_hidden_size_300.png
+ptb_word_lm.py
+ptb_word_lm2.py
+reader.py
+reader.pyc
+reader_test.py
+rnn_cell.py
+rnn_cell.pyc
+runs
+simple-examples
+MacBook-Pro-5:ptb matthewdunn$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/grucell3
+Epoch: 1 Learning rate: 1.000
+0.004 perplexity: 25179.500 speed: 476 wps
+0.104 perplexity: 2586.045 speed: 936 wps
+0.204 perplexity: 1298.905 speed: 1003 wps
+0.304 perplexity: 875.601 speed: 1012 wps
+0.404 perplexity: 688.018 speed: 1028 wps
+0.504 perplexity: 579.412 speed: 1040 wps
+0.604 perplexity: 502.412 speed: 1048 wps
+0.703 perplexity: 451.638 speed: 1046 wps
+0.803 perplexity: 413.723 speed: 1052 wps
+0.903 perplexity: 381.819 speed: 1052 wps
+Epoch: 1 Train Perplexity: 359.250
+Epoch: 1 Valid Perplexity: 220.565
+steps_taken
+0
+Epoch: 2 Learning rate: 1.000
+0.004 perplexity: 245.640 speed: 1056 wps
+0.104 perplexity: 184.066 speed: 1046 wps
+0.204 perplexity: 194.185 speed: 1027 wps
+0.304 perplexity: 187.033 speed: 1027 wps
+0.404 perplexity: 185.488 speed: 991 wps
+0.504 perplexity: 182.239 speed: 987 wps
+0.604 perplexity: 178.337 speed: 1003 wps
+0.703 perplexity: 176.562 speed: 1015 wps
+0.803 perplexity: 174.977 speed: 1023 wps
+0.903 perplexity: 172.827 speed: 1030 wps
+Epoch: 2 Train Perplexity: 172.646
+Epoch: 2 Valid Perplexity: 206.127
+steps_taken
+1
+Epoch: 3 Learning rate: 1.000
+0.004 perplexity: 171.487 speed: 1068 wps
+0.104 perplexity: 162.825 speed: 1086 wps
+0.204 perplexity: 181.144 speed: 1081 wps
+0.304 perplexity: 201.201 speed: 1084 wps
+0.404 perplexity: 235.737 speed: 1074 wps
+0.504 perplexity: 272.050 speed: 1077 wps
+0.604 perplexity: 299.371 speed: 1088 wps
+0.703 perplexity: 328.150 speed: 1088 wps
+0.803 perplexity: 346.753 speed: 1095 wps
+0.903 perplexity: 356.888 speed: 1100 wps
+Epoch: 3 Train Perplexity: 365.266
+Epoch: 3 Valid Perplexity: 534.969
+steps_taken
+2
+Epoch: 4 Learning rate: 1.000
+0.004 perplexity: 513.923 speed: 1159 wps
+0.104 perplexity: 475.953 speed: 1148 wps
+0.204 perplexity: 477.440 speed: 1145 wps
+0.304 perplexity: 462.074 speed: 1145 wps
+0.404 perplexity: 461.586 speed: 1129 wps
+0.504 perplexity: 460.696 speed: 1121 wps
+0.604 perplexity: 458.128 speed: 1099 wps
+0.703 perplexity: 462.247 speed: 1096 wps
+0.803 perplexity: 467.358 speed: 1096 wps
+0.903 perplexity: 472.601 speed: 1083 wps
+Epoch: 4 Train Perplexity: 480.479
+Epoch: 4 Valid Perplexity: 600.489
+steps_taken
+3
+we are stopping early
+Test Perplexity: 579.467
+Train Time in Minutes: 61.9406379183
+Saving model to ./runs/grucell3.
+9
+[[ -1.41522504e-04   1.52689473e-04]
+ [  1.47473197e-04  -2.27921382e-05]
+ [  1.03509139e-04  -2.28817693e-05]
+ [  1.78395781e-04   4.06115265e-05]
+ [ -4.74857480e-05  -3.01164236e-06]
+ [  4.04180130e-05  -1.17714138e-05]
+ [  1.59644097e-04   2.96342536e-05]
+ [  1.20937498e-04   1.22141188e-04]
+ [  5.24017221e-05  -1.41745740e-04]
+ [ -2.46880806e-04   3.30544550e-05]
+ [ -8.52440549e-05  -1.80939240e-04]
+ [ -3.26807778e-05   8.27188668e-05]
+ [  3.58202416e-05   9.31959782e-05]
+ [  1.21690308e-05   9.19708551e-05]
+ [ -4.01171540e-05   2.04205674e-04]
+ [ -1.65283128e-04   1.35054133e-05]
+ [ -7.09587932e-05  -1.07843659e-04]
+ [  1.05646010e-04  -9.44319604e-05]
+ [ -3.59977426e-05   3.43447659e-06]
+ [  1.08283211e-04  -3.52998854e-05]]
+MacBook-Pro-5:ptb matthewdunn$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/baseline_stopping
+Epoch: 1 Learning rate: 1.000
+0.004 perplexity: 5818.701 speed: 484 wps
+0.104 perplexity: 848.178 speed: 780 wps
+0.204 perplexity: 633.771 speed: 807 wps
+0.304 perplexity: 512.207 speed: 811 wps
+0.404 perplexity: 441.538 speed: 824 wps
+0.504 perplexity: 393.855 speed: 842 wps
+0.604 perplexity: 354.769 speed: 821 wps
+0.703 perplexity: 327.184 speed: 803 wps
+0.803 perplexity: 305.119 speed: 796 wps
+0.903 perplexity: 285.462 speed: 782 wps
+Epoch: 1 Train Perplexity: 271.224
+Epoch: 1 Valid Perplexity: 182.703
+steps_taken
+0
+Epoch: 2 Learning rate: 1.000
+0.004 perplexity: 186.398 speed: 719 wps
+0.104 perplexity: 149.249 speed: 735 wps
+0.204 perplexity: 157.873 speed: 801 wps
+0.304 perplexity: 152.302 speed: 819 wps
+0.404 perplexity: 150.460 speed: 843 wps
+0.504 perplexity: 147.063 speed: 870 wps
+0.604 perplexity: 143.049 speed: 880 wps
+0.703 perplexity: 140.744 speed: 888 wps
+0.803 perplexity: 138.361 speed: 891 wps
+0.903 perplexity: 134.789 speed: 901 wps
+Epoch: 2 Train Perplexity: 133.211
+Epoch: 2 Valid Perplexity: 141.758
+steps_taken
+1
+Epoch: 3 Learning rate: 1.000
+0.004 perplexity: 113.807 speed: 964 wps
+0.104 perplexity: 104.564 speed: 929 wps
+0.204 perplexity: 113.802 speed: 937 wps
+0.304 perplexity: 110.283 speed: 955 wps
+0.404 perplexity: 110.086 speed: 960 wps
+0.504 perplexity: 108.642 speed: 971 wps
+0.604 perplexity: 106.315 speed: 978 wps
+0.703 perplexity: 105.755 speed: 984 wps
+0.803 perplexity: 104.526 speed: 974 wps
+0.903 perplexity: 102.364 speed: 980 wps
+Epoch: 3 Train Perplexity: 101.847
+Epoch: 3 Valid Perplexity: 133.297
+steps_taken
+2
+we are stopping early
+Test Perplexity: 129.806
+Train Time in Minutes: 55.8745658
+Saving model to ./runs/baseline_stopping.
+10
+[[ -3.73052833e-06   1.05421703e-04]
+ [  5.03628145e-05  -4.08409926e-05]
+ [  1.18736581e-05   1.66221410e-05]
+ [ -1.50690822e-04  -1.02682832e-04]
+ [ -7.69964171e-05  -1.03903779e-04]
+ [ -9.44244204e-05   5.10310744e-05]
+ [ -1.24475645e-04   4.48142374e-05]
+ [  3.99560453e-05   9.82568076e-06]
+ [ -2.18623823e-04   1.36388681e-04]
+ [ -2.14106199e-05   3.35435787e-05]
+ [ -5.09962007e-05   4.92691607e-05]
+ [  5.00319901e-05   5.00687867e-05]
+ [ -9.12176471e-05  -1.87492067e-04]
+ [ -5.17820607e-06   3.18165944e-05]
+ [ -3.75826601e-05  -6.08149855e-05]
+ [ -1.42712997e-04   8.05877327e-05]
+ [ -9.43758956e-05  -8.16359319e-05]
+ [  5.75990231e-05   2.93871069e-05]
+ [ -5.16677450e-05  -4.15748655e-05]
+ [  7.76589325e-05  -1.25482387e-04]]
+MacBook-Pro-5:ptb matthewdunn$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/grucell4_stopping
+Epoch: 1 Learning rate: 1.000
+0.004 perplexity: 20689.111 speed: 570 wps
+0.104 perplexity: 2398.686 speed: 941 wps
+0.204 perplexity: 1197.114 speed: 989 wps
+0.304 perplexity: 822.853 speed: 1004 wps
+0.404 perplexity: 652.994 speed: 1019 wps
+0.504 perplexity: 554.708 speed: 1032 wps
+0.604 perplexity: 484.702 speed: 1037 wps
+0.703 perplexity: 437.670 speed: 1033 wps
+0.803 perplexity: 402.380 speed: 1033 wps
+0.903 perplexity: 372.330 speed: 1027 wps
+Epoch: 1 Train Perplexity: 350.815
+Epoch: 1 Valid Perplexity: 213.588
+VALID PERPLEXITY_+_+_++__+_
+213.587784563
+steps_taken
+0
+Epoch: 2 Learning rate: 1.000
+0.004 perplexity: 242.895 speed: 1022 wps
+0.104 perplexity: 183.611 speed: 1055 wps
+0.204 perplexity: 192.996 speed: 1060 wps
+0.304 perplexity: 185.919 speed: 1058 wps
+0.404 perplexity: 184.033 speed: 1043 wps
+0.504 perplexity: 180.590 speed: 1045 wps
+0.604 perplexity: 176.715 speed: 1045 wps
+0.703 perplexity: 174.693 speed: 1049 wps
+0.803 perplexity: 172.671 speed: 1047 wps
+0.903 perplexity: 169.708 speed: 1045 wps
+Epoch: 2 Train Perplexity: 168.659
+Epoch: 2 Valid Perplexity: 195.917
+VALID PERPLEXITY_+_+_++__+_
+195.917152074
+better performance
+Epoch: 3 Learning rate: 1.000
+0.004 perplexity: 155.638 speed: 1075 wps
+0.104 perplexity: 146.751 speed: 1070 wps
+0.204 perplexity: 158.011 speed: 1061 wps
+0.304 perplexity: 156.546 speed: 1063 wps
+0.404 perplexity: 160.080 speed: 1065 wps
+0.504 perplexity: 166.031 speed: 1040 wps
+0.604 perplexity: 178.721 speed: 1040 wps
+0.703 perplexity: 201.757 speed: 1032 wps
+0.803 perplexity: 229.250 speed: 1033 wps
+0.903 perplexity: 253.752 speed: 1033 wps
+Epoch: 3 Train Perplexity: 275.789
+Epoch: 3 Valid Perplexity: 532.977
+VALID PERPLEXITY_+_+_++__+_
+532.977474459
+steps_taken
+1
+Epoch: 4 Learning rate: 1.000
+0.004 perplexity: 467.749 speed: 1059 wps
+0.104 perplexity: 450.182 speed: 1070 wps
+0.204 perplexity: 449.685 speed: 1066 wps
+0.304 perplexity: 441.371 speed: 1037 wps
+0.404 perplexity: 444.904 speed: 1004 wps
+0.504 perplexity: 441.898 speed: 1012 wps
+0.604 perplexity: 433.531 speed: 1009 wps
+0.703 perplexity: 435.941 speed: 1008 wps
+0.803 perplexity: 435.914 speed: 1013 wps
+0.903 perplexity: 431.092 speed: 1011 wps
+Epoch: 4 Train Perplexity: 424.427
+Epoch: 4 Valid Perplexity: 432.144
+VALID PERPLEXITY_+_+_++__+_
+432.143685095
+better performance
+Epoch: 5 Learning rate: 1.000
+0.004 perplexity: 391.543 speed: 1043 wps
+0.104 perplexity: 382.482 speed: 1062 wps
+0.204 perplexity: 442.934 speed: 1035 wps
+0.304 perplexity: 446.911 speed: 1045 wps
+0.404 perplexity: 429.895 speed: 1055 wps
+0.504 perplexity: 418.862 speed: 1061 wps
+0.604 perplexity: 409.978 speed: 1039 wps
+0.703 perplexity: 405.287 speed: 1033 wps
+0.803 perplexity: 400.181 speed: 1038 wps
+0.903 perplexity: 396.177 speed: 1040 wps
+Epoch: 5 Train Perplexity: 394.765
+Epoch: 5 Valid Perplexity: 467.675
+VALID PERPLEXITY_+_+_++__+_
+467.67545947
+steps_taken
+1
+Epoch: 6 Learning rate: 0.500
+0.004 perplexity: 364.409 speed: 1070 wps
+^CTraceback (most recent call last):
+  File "ptb_word_lm.py", line 543, in <module>
+    
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv[:1] + flags_passthrough))
+  File "ptb_word_lm.py", line 494, in main
+    print("VALID PERPLEXITY_+_+_++__+_")
+  File "ptb_word_lm.py", line 342, in run_epoch
+    vals = session.run(fetches, feed_dict)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 717, in run
+    run_metadata_ptr)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 915, in _run
+    feed_dict_string, options, run_metadata)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 965, in _do_run
+    target_list, options, run_metadata)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 972, in _do_call
+    return fn(*args)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 954, in _run_fn
+    status, run_metadata)
+KeyboardInterrupt
+MacBook-Pro-5:ptb matthewdunn$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/grucell4_stopping
+  File "ptb_word_lm.py", line 481
+    print i
+          ^
+SyntaxError: invalid syntax
+MacBook-Pro-5:ptb matthewdunn$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/grucell4_stopping
+Traceback (most recent call last):
+  File "ptb_word_lm.py", line 542, in <module>
+    tf.app.run()
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv[:1] + flags_passthrough))
+  File "ptb_word_lm.py", line 478, in main
+    with sv.managed_session() as session:
+  File "//anaconda/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/supervisor.py", line 969, in managed_session
+    self.stop(close_summary_writer=close_summary_writer)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/supervisor.py", line 797, in stop
+    stop_grace_period_secs=self._stop_grace_secs)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/coordinator.py", line 386, in join
+    six.reraise(*self._exc_info_to_raise)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/supervisor.py", line 958, in managed_session
+    start_standard_services=start_standard_services)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/supervisor.py", line 715, in prepare_or_wait_for_session
+    init_feed_dict=self._init_feed_dict, init_fn=self._init_fn)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/session_manager.py", line 227, in prepare_session
+    config=config)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/session_manager.py", line 173, in _restore_checkpoint
+    saver.restore(sess, ckpt.model_checkpoint_path)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 1436, in restore
+    {self.saver_def.filename_tensor_name: save_path})
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 717, in run
+    run_metadata_ptr)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 915, in _run
+    feed_dict_string, options, run_metadata)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 965, in _do_run
+    target_list, options, run_metadata)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 985, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors.InvalidArgumentError: Assign requires shapes of both tensors to match. lhs shape= [40] rhs shape= [400]
+	 [[Node: save/Assign_2 = Assign[T=DT_FLOAT, _class=["loc:@Model/RNN/MultiRNNCell/Cell0/GRUCell/Gates/Linear/Bias"], use_locking=true, validate_shape=true, _device="/job:localhost/replica:0/task:0/cpu:0"](Model/RNN/MultiRNNCell/Cell0/GRUCell/Gates/Linear/Bias, save/restore_slice_2)]]
+
+Caused by op u'save/Assign_2', defined at:
+  File "ptb_word_lm.py", line 542, in <module>
+    tf.app.run()
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv[:1] + flags_passthrough))
+  File "ptb_word_lm.py", line 477, in main
+    sv = tf.train.Supervisor(logdir=FLAGS.save_path)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/supervisor.py", line 313, in __init__
+    self._init_saver(saver=saver)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/supervisor.py", line 456, in _init_saver
+    saver = saver_mod.Saver()
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 1077, in __init__
+    self.build()
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 1106, in build
+    restore_sequentially=self._restore_sequentially)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 704, in build
+    restore_sequentially, reshape)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 453, in _AddRestoreOps
+    assign_ops.append(saveable.restore(tensors, shapes))
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 211, in restore
+    self.op.get_shape().is_fully_defined())
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/ops/gen_state_ops.py", line 45, in assign
+    use_locking=use_locking, name=name)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py", line 749, in apply_op
+    op_def=op_def)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2380, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1298, in __init__
+    self._traceback = _extract_stack()
+
+InvalidArgumentError (see above for traceback): Assign requires shapes of both tensors to match. lhs shape= [40] rhs shape= [400]
+	 [[Node: save/Assign_2 = Assign[T=DT_FLOAT, _class=["loc:@Model/RNN/MultiRNNCell/Cell0/GRUCell/Gates/Linear/Bias"], use_locking=true, validate_shape=true, _device="/job:localhost/replica:0/task:0/cpu:0"](Model/RNN/MultiRNNCell/Cell0/GRUCell/Gates/Linear/Bias, save/restore_slice_2)]]
+
+MacBook-Pro-5:ptb matthewdunn$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/grucell5_stopping
+0
+lr_decay
+1.0
+Epoch: 1 Learning rate: 1.000
+0.002 perplexity: 6374.886 speed: 1148 wps
+0.102 perplexity: 824.030 speed: 2053 wps
+0.202 perplexity: 657.037 speed: 2092 wps
+0.302 perplexity: 564.866 speed: 2125 wps
+0.402 perplexity: 509.204 speed: 2109 wps
+0.501 perplexity: 474.761 speed: 2100 wps
+0.601 perplexity: 441.752 speed: 2113 wps
+0.701 perplexity: 419.489 speed: 2122 wps
+0.801 perplexity: 403.235 speed: 2126 wps
+0.901 perplexity: 388.730 speed: 2132 wps
+Epoch: 1 Train Perplexity: 377.737
+Epoch: 1 Valid Perplexity: 323.240
+VALID PERPLEXITY_+_+_++__+_
+323.240007783
+steps_taken
+0
+1
+lr_decay
+1.0
+Epoch: 2 Learning rate: 1.000
+0.002 perplexity: 377.261 speed: 2197 wps
+0.102 perplexity: 289.555 speed: 2195 wps
+0.202 perplexity: 299.539 speed: 2172 wps
+0.302 perplexity: 297.065 speed: 2066 wps
+0.402 perplexity: 295.760 speed: 2038 wps
+0.501 perplexity: 296.431 speed: 2085 wps
+0.601 perplexity: 292.007 speed: 2122 wps
+0.701 perplexity: 290.386 speed: 2132 wps
+0.801 perplexity: 290.760 speed: 2140 wps
+0.901 perplexity: 289.175 speed: 2144 wps
+Epoch: 2 Train Perplexity: 288.170
+Epoch: 2 Valid Perplexity: 322.983
+VALID PERPLEXITY_+_+_++__+_
+322.983491498
+better performance
+2
+lr_decay
+0.5
+Epoch: 3 Learning rate: 0.500
+0.002 perplexity: 308.836 speed: 2276 wps
+0.102 perplexity: 239.720 speed: 2211 wps
+0.202 perplexity: 246.783 speed: 2207 wps
+0.302 perplexity: 242.834 speed: 2184 wps
+0.402 perplexity: 241.064 speed: 2143 wps
+0.501 perplexity: 240.287 speed: 2114 wps
+0.601 perplexity: 235.613 speed: 2114 wps
+0.701 perplexity: 233.349 speed: 2082 wps
+0.801 perplexity: 231.706 speed: 2107 wps
+0.901 perplexity: 228.618 speed: 2125 wps
+Epoch: 3 Train Perplexity: 226.702
+Epoch: 3 Valid Perplexity: 253.601
+VALID PERPLEXITY_+_+_++__+_
+253.601260823
+better performance
+3
+lr_decay
+0.25
+Epoch: 4 Learning rate: 0.250
+0.002 perplexity: 250.356 speed: 1345 wps
+0.102 perplexity: 202.569 speed: 2142 wps
+^CTraceback (most recent call last):
+  File "ptb_word_lm.py", line 542, in <module>
+    tf.app.run()
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv[:1] + flags_passthrough))
+  File "ptb_word_lm.py", line 492, in main
+    verbose=True)
+  File "ptb_word_lm.py", line 344, in run_epoch
+    vals = session.run(fetches, feed_dict)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 717, in run
+    run_metadata_ptr)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 915, in _run
+    feed_dict_string, options, run_metadata)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 965, in _do_run
+    target_list, options, run_metadata)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 972, in _do_call
+    return fn(*args)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 954, in _run_fn
+    status, run_metadata)
+KeyboardInterrupt
+MacBook-Pro-5:ptb matthewdunn$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/grucell5_stopping
+^CTraceback (most recent call last):
+  File "ptb_word_lm.py", line 542, in <module>
+    tf.app.run()
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv[:1] + flags_passthrough))
+  File "ptb_word_lm.py", line 450, in main
+    config=config, data=train_data, name="TrainInput")
+  File "ptb_word_lm.py", line 98, in __init__
+    data, batch_size, num_steps, name=name)
+  File "/Users/matthewdunn/Dropbox/NYU/fall2016/nlp/nlp_assignments/A3/ptb/reader.py", line 102, in ptb_producer
+    raw_data, name="raw_data", dtype=tf.int32)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 657, in convert_to_tensor
+    ret = conversion_func(value, dtype=dtype, name=name, as_ref=as_ref)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/ops/array_ops.py", line 736, in _autopacking_conversion_function
+    inferred_dtype = _get_dtype_from_nested_lists(v)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/ops/array_ops.py", line 723, in _get_dtype_from_nested_lists
+    if ops.is_dense_tensor_like(elem):
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 155, in is_dense_tensor_like
+    return isinstance(t, _TENSOR_LIKE_TYPES)
+KeyboardInterrupt
+MacBook-Pro-5:ptb matthewdunn$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/grucell6_stopping
+0
+lr_decay
+1.0
+Epoch: 1 Learning rate: 1.000
+0.004 perplexity: 28477.338 speed: 466 wps
+0.104 perplexity: 1904.498 speed: 908 wps
+0.204 perplexity: 1063.251 speed: 948 wps
+0.304 perplexity: 760.901 speed: 958 wps
+0.404 perplexity: 616.277 speed: 973 wps
+0.504 perplexity: 529.737 speed: 981 wps
+0.604 perplexity: 465.898 speed: 990 wps
+0.703 perplexity: 422.867 speed: 992 wps
+^CTraceback (most recent call last):
+  File "ptb_word_lm.py", line 542, in <module>
+    tf.app.run()
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv[:1] + flags_passthrough))
+  File "ptb_word_lm.py", line 492, in main
+    verbose=True)
+  File "ptb_word_lm.py", line 344, in run_epoch
+    vals = session.run(fetches, feed_dict)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 717, in run
+    run_metadata_ptr)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 915, in _run
+    feed_dict_string, options, run_metadata)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 965, in _do_run
+    target_list, options, run_metadata)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 972, in _do_call
+    return fn(*args)
+  File "//anaconda/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 954, in _run_fn
+    status, run_metadata)
+KeyboardInterrupt
+MacBook-Pro-5:ptb matthewdunn$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/lstm_no_f_gate
+0
+lr_decay
+1.0
+Epoch: 1 Learning rate: 1.000
+0.004 perplexity: 9637.647 speed: 600 wps
+0.104 perplexity: 991.096 speed: 907 wps
+0.204 perplexity: 760.902 speed: 930 wps
+0.304 perplexity: 653.328 speed: 912 wps
+0.404 perplexity: 588.990 speed: 927 wps
+0.504 perplexity: 541.673 speed: 937 wps
+0.604 perplexity: 498.450 speed: 945 wps
+0.703 perplexity: 465.778 speed: 943 wps
+0.803 perplexity: 439.345 speed: 950 wps
+0.903 perplexity: 416.041 speed: 954 wps
+Epoch: 1 Train Perplexity: 398.123
+Epoch: 1 Valid Perplexity: 278.301
+VALID PERPLEXITY_+_+_++__+_
+278.300545546
+steps_taken
+0
+1
+lr_decay
+1.0
+Epoch: 2 Learning rate: 1.000
+0.004 perplexity: 308.076 speed: 929 wps
+0.104 perplexity: 242.318 speed: 997 wps
+0.204 perplexity: 250.329 speed: 1000 wps
+0.304 perplexity: 244.224 speed: 997 wps
+0.404 perplexity: 242.166 speed: 1005 wps
+0.504 perplexity: 238.114 speed: 1009 wps
+0.604 perplexity: 232.478 speed: 1013 wps
+0.703 perplexity: 228.695 speed: 1019 wps
+0.803 perplexity: 224.658 speed: 1023 wps
+0.903 perplexity: 219.990 speed: 1020 wps
+Epoch: 2 Train Perplexity: 217.206
+Epoch: 2 Valid Perplexity: 216.812
+VALID PERPLEXITY_+_+_++__+_
+216.811924682
+better performance
+2
+lr_decay
+0.5
+Epoch: 3 Learning rate: 0.500
+0.004 perplexity: 182.465 speed: 1037 wps
+0.104 perplexity: 167.193 speed: 1060 wps
+0.204 perplexity: 175.340 speed: 1042 wps
+0.304 perplexity: 172.191 speed: 1024 wps
+0.404 perplexity: 171.895 speed: 1013 wps
+0.504 perplexity: 170.734 speed: 1011 wps
+0.604 perplexity: 167.494 speed: 997 wps
+0.703 perplexity: 166.039 speed: 1001 wps
+0.803 perplexity: 164.010 speed: 1002 wps
+0.903 perplexity: 161.317 speed: 1002 wps
+Epoch: 3 Train Perplexity: 160.287
+Epoch: 3 Valid Perplexity: 184.906
+VALID PERPLEXITY_+_+_++__+_
+184.905801057
+better performance
+3
+lr_decay
+0.25
+Epoch: 4 Learning rate: 0.250
+0.004 perplexity: 162.460 speed: 927 wps
+0.104 perplexity: 142.504 speed: 984 wps
+0.204 perplexity: 150.022 speed: 977 wps
+0.304 perplexity: 147.400 speed: 990 wps
+0.404 perplexity: 147.244 speed: 985 wps
+0.504 perplexity: 146.590 speed: 984 wps
+0.604 perplexity: 143.844 speed: 983 wps
+0.703 perplexity: 142.934 speed: 978 wps
+0.803 perplexity: 141.234 speed: 960 wps
+0.903 perplexity: 139.064 speed: 955 wps
+Epoch: 4 Train Perplexity: 138.383
+Epoch: 4 Valid Perplexity: 165.735
+VALID PERPLEXITY_+_+_++__+_
+165.734767895
+better performance
+4
+lr_decay
+0.125
+Epoch: 5 Learning rate: 0.125
+0.004 perplexity: 147.122 speed: 1040 wps
+0.104 perplexity: 129.366 speed: 1045 wps
+0.204 perplexity: 137.288 speed: 1038 wps
+0.304 perplexity: 134.918 speed: 1012 wps
+0.404 perplexity: 134.770 speed: 977 wps
+0.504 perplexity: 134.392 speed: 973 wps
+0.604 perplexity: 131.916 speed: 975 wps
+0.703 perplexity: 131.462 speed: 969 wps
+0.803 perplexity: 129.689 speed: 965 wps
+0.903 perplexity: 127.787 speed: 966 wps
+Epoch: 5 Train Perplexity: 127.341
+Epoch: 5 Valid Perplexity: 157.559
+VALID PERPLEXITY_+_+_++__+_
+157.558696734
+better performance
+5
+lr_decay
+0.0625
+Epoch: 6 Learning rate: 0.062
+0.004 perplexity: 138.016 speed: 989 wps
+0.104 perplexity: 123.177 speed: 935 wps
+0.204 perplexity: 130.188 speed: 932 wps
+0.304 perplexity: 128.148 speed: 949 wps
+0.404 perplexity: 128.253 speed: 953 wps
+0.504 perplexity: 127.985 speed: 958 wps
+0.604 perplexity: 125.691 speed: 931 wps
+0.703 perplexity: 125.489 speed: 928 wps
+0.803 perplexity: 123.707 speed: 935 wps
+0.903 perplexity: 121.902 speed: 927 wps
+Epoch: 6 Train Perplexity: 121.627
+Epoch: 6 Valid Perplexity: 153.897
+VALID PERPLEXITY_+_+_++__+_
+153.896544939
+better performance
+6
+lr_decay
+0.03125
+Epoch: 7 Learning rate: 0.031
+0.004 perplexity: 123.915 speed: 978 wps
+0.104 perplexity: 119.831 speed: 1004 wps
+0.204 perplexity: 126.116 speed: 980 wps
+0.304 perplexity: 124.590 speed: 992 wps
+0.404 perplexity: 124.551 speed: 993 wps
+0.504 perplexity: 124.522 speed: 998 wps
+0.604 perplexity: 122.269 speed: 999 wps
+0.703 perplexity: 122.107 speed: 1003 wps
+0.803 perplexity: 120.449 speed: 996 wps
+0.903 perplexity: 118.702 speed: 1001 wps
+Epoch: 7 Train Perplexity: 118.490
+Epoch: 7 Valid Perplexity: 152.094
+VALID PERPLEXITY_+_+_++__+_
+152.094056457
+better performance
+7
+lr_decay
+0.015625
+Epoch: 8 Learning rate: 0.016
+0.004 perplexity: 131.502 speed: 968 wps
+0.104 perplexity: 118.237 speed: 952 wps
+0.204 perplexity: 123.904 speed: 942 wps
+0.304 perplexity: 122.731 speed: 938 wps
+0.404 perplexity: 122.616 speed: 918 wps
+0.504 perplexity: 122.842 speed: 929 wps
+0.604 perplexity: 120.629 speed: 935 wps
+0.703 perplexity: 120.551 speed: 934 wps
+0.803 perplexity: 118.770 speed: 943 wps
+0.903 perplexity: 117.094 speed: 952 wps
+Epoch: 8 Train Perplexity: 116.929
+Epoch: 8 Valid Perplexity: 150.963
+VALID PERPLEXITY_+_+_++__+_
+150.962806509
+better performance
+8
+lr_decay
+0.0078125
+Epoch: 9 Learning rate: 0.008
+0.004 perplexity: 124.396 speed: 959 wps
+0.104 perplexity: 118.109 speed: 923 wps
+0.204 perplexity: 122.315 speed: 974 wps
+0.304 perplexity: 121.761 speed: 995 wps
+0.404 perplexity: 121.593 speed: 977 wps
+0.504 perplexity: 122.069 speed: 953 wps
+0.604 perplexity: 119.877 speed: 940 wps
+0.703 perplexity: 119.722 speed: 945 wps
+0.803 perplexity: 118.024 speed: 946 wps
+0.903 perplexity: 116.341 speed: 936 wps
+Epoch: 9 Train Perplexity: 116.184
+Epoch: 9 Valid Perplexity: 150.863
+VALID PERPLEXITY_+_+_++__+_
+150.863425581
+better performance
+9
+lr_decay
+0.00390625
+Epoch: 10 Learning rate: 0.004
+0.004 perplexity: 120.734 speed: 1038 wps
+0.104 perplexity: 117.747 speed: 1005 wps
+0.204 perplexity: 121.345 speed: 1004 wps
+0.304 perplexity: 121.183 speed: 1014 wps
+0.404 perplexity: 121.139 speed: 1008 wps
+0.504 perplexity: 121.610 speed: 997 wps
+0.604 perplexity: 119.383 speed: 999 wps
+0.703 perplexity: 119.321 speed: 991 wps
+0.803 perplexity: 117.648 speed: 980 wps
+0.903 perplexity: 115.807 speed: 978 wps
+Epoch: 10 Train Perplexity: 115.719
+Epoch: 10 Valid Perplexity: 150.249
+VALID PERPLEXITY_+_+_++__+_
+150.24850307
+better performance
+Test Perplexity: 143.037
+Train Time in Minutes: 165.395021649
+Saving model to ./runs/lstm_no_f_gate.
+The score was:
+9
+[[ -1.67323513e-04  -3.17005350e-05]
+ [  3.04252368e-05   6.02052829e-05]
+ [  1.41337002e-04   4.23503212e-05]
+ [  9.83986879e-05  -9.62370225e-05]
+ [  1.59597160e-04  -2.25421663e-05]
+ [ -1.16185243e-04   5.63511089e-05]
+ [ -2.11369206e-04  -3.38136848e-05]
+ [ -1.68021161e-05   1.07140140e-04]
+ [ -1.53791858e-05   8.47364980e-05]
+ [ -2.09865655e-05   5.71714101e-05]
+ [  1.48384477e-05   5.70616958e-05]
+ [ -1.68803540e-06  -2.09250332e-05]
+ [ -9.49303250e-05   4.64115219e-05]
+ [ -7.76779474e-05   5.83190580e-05]
+ [ -3.17950906e-05   2.18521200e-04]
+ [ -3.11364532e-04   2.94431622e-06]
+ [  3.96775779e-05  -1.92548068e-04]
+ [ -3.86932410e-05  -7.25639614e-05]
+ [  1.15223297e-04   9.60876557e-07]
+ [  1.13939819e-04   2.03420129e-05]]
+MacBook-Pro-5:ptb matthewdunn$ 

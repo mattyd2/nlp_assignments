@@ -1,0 +1,743 @@
+Last login: Fri Nov  4 19:16:05 on ttys005
+MacBook-Pro-5:~ matthewdunn$ ssh -i "/Users/matthewdunn/Dropbox/NYU/mattyd.pem" ubuntu@ec2-54-172-121-112.compute-1.amazonaws.com
+ssh: connect to host ec2-54-172-121-112.compute-1.amazonaws.com port 22: Connection refused
+MacBook-Pro-5:~ matthewdunn$ ssh -i "/Users/matthewdunn/Dropbox/NYU/mattyd.pem" ubuntu@ec2-54-172-121-112.compute-1.amazonaws.com
+The authenticity of host 'ec2-54-172-121-112.compute-1.amazonaws.com (54.172.121.112)' can't be established.
+ECDSA key fingerprint is SHA256:EMwrBakiz59NtoDDiqF9mgMsXz5jETkkqCYtrYyy6/M.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-54-172-121-112.compute-1.amazonaws.com,54.172.121.112' (ECDSA) to the list of known hosts.
+
+
+########################################################################################################################
+########################################################################################################################
+
+  ____  _ _    __           _               _
+ | __ )(_) |_ / _|_   _ ___(_) ___  _ __   (_) ___
+ |  _ \| | __| |_| | | / __| |/ _ \| '_ \  | |/ _ \
+ | |_) | | |_|  _| |_| \__ \ | (_) | | | |_| | (_) |
+ |____/|_|\__|_|  \__,_|___/_|\___/|_| |_(_)_|\___/
+
+
+Welcome to Bitfusion Ubuntu 14 Tensorflow - Ubuntu 14.04 LTS (GNU/Linux 3.13.0-95-generic x86_64)
+
+This AMI is brought to you by Bitfusion.io
+http://www.bitfusion.io
+
+Please email all feedback and support requests to:
+support@bitfusion.io
+
+We would love to hear from you! Contact us with any feedback or a feature request at the email above.
+
+########################################################################################################################
+########################################################################################################################
+
+
+
+########################################################################################################################
+########################################################################################################################
+
+                                           BITFUSION EMAIL OPT IN                                                       
+
+Register your email address to be entered into our monthly draw for Bitfusion t-shirts and  occasional hardware         
+goodies.  Additionally you will receive product updates and information about new offerings from Bitfusion.
+
+########################################################################################################################
+########################################################################################################################
+
+Would you like to register with Bitfusion.io? [y/n] n
+
+Thank you for using the Bitfusion Ubuntu 14 Tensorflow
+
+Please review the README located at /home/ubuntu/README for more details on how to use this AMI
+
+ubuntu@ip-172-31-14-55:~$ ls
+bin  EULA  keras-examples  magenta  pynb  README  tensorflow  tf-serving
+ubuntu@ip-172-31-14-55:~$ mkdir A3
+ubuntu@ip-172-31-14-55:~$ cd A3/
+ubuntu@ip-172-31-14-55:~/A3$ mkdir simple-examples
+ubuntu@ip-172-31-14-55:~/A3$ cd simple-examples/
+ubuntu@ip-172-31-14-55:~/A3/simple-examples$ mkdir data
+ubuntu@ip-172-31-14-55:~/A3/simple-examples$ cd ..
+ubuntu@ip-172-31-14-55:~/A3$ cd ..
+ubuntu@ip-172-31-14-55:~$ ls
+A3  bin  EULA  keras-examples  magenta  pynb  README  tensorflow  tf-serving
+ubuntu@ip-172-31-14-55:~$ cd A3/
+ubuntu@ip-172-31-14-55:~/A3$ ls
+__init__.py  ptb_word_lm.py  reader.py  rnn_cell.py  simple-examples
+ubuntu@ip-172-31-14-55:~/A3$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/lstm_no_i_gate
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcublas.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcufft.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcurand.so.7.5 locally
+E tensorflow/stream_executor/cuda/cuda_driver.cc:491] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:140] kernel driver does not appear to be running on this host (ip-172-31-14-55): /proc/driver/nvidia/version does not exist
+I tensorflow/core/common_runtime/gpu/gpu_init.cc:81] No GPU devices available on machine.
+0
+lr_decay
+1.0
+Epoch: 1 Learning rate: 1.000
+0.004 perplexity: 3629.494 speed: 1095 wps
+0.104 perplexity: 992.834 speed: 3544 wps
+0.204 perplexity: 879.702 speed: 3739 wps
+0.304 perplexity: 829.673 speed: 3784 wps
+0.404 perplexity: 804.851 speed: 3799 wps
+0.504 perplexity: 788.756 speed: 3822 wps
+0.604 perplexity: 770.603 speed: 3833 wps
+0.703 perplexity: 758.673 speed: 3839 wps
+0.803 perplexity: 750.554 speed: 3847 wps
+0.903 perplexity: 743.666 speed: 3850 wps
+Epoch: 1 Train Perplexity: 738.218
+Epoch: 1 Valid Perplexity: 693.070
+VALID PERPLEXITY_+_+_++__+_
+693.070108383
+steps_taken
+0
+1
+lr_decay
+1.0
+Epoch: 2 Learning rate: 1.000
+0.004 perplexity: 729.692 speed: 3930 wps
+0.104 perplexity: 681.776 speed: 3915 wps
+0.204 perplexity: 694.948 speed: 3912 wps
+0.304 perplexity: 696.008 speed: 3900 wps
+0.404 perplexity: 699.450 speed: 3903 wps
+0.504 perplexity: 701.194 speed: 3896 wps
+0.604 perplexity: 696.656 speed: 3898 wps
+0.703 perplexity: 694.239 speed: 3897 wps
+0.803 perplexity: 693.467 speed: 3894 wps
+0.903 perplexity: 692.319 speed: 3890 wps
+Epoch: 2 Train Perplexity: 691.577
+Epoch: 2 Valid Perplexity: 705.108
+VALID PERPLEXITY_+_+_++__+_
+705.107688113
+steps_taken
+1
+2
+lr_decay
+0.5
+Epoch: 3 Learning rate: 0.500
+0.004 perplexity: 728.878 speed: 3951 wps
+0.104 perplexity: 678.270 speed: 3849 wps
+0.204 perplexity: 693.262 speed: 3831 wps
+0.304 perplexity: 693.585 speed: 3853 wps
+0.404 perplexity: 697.304 speed: 3868 wps
+0.504 perplexity: 698.362 speed: 3818 wps
+0.604 perplexity: 693.710 speed: 3826 wps
+0.703 perplexity: 690.962 speed: 3823 wps
+0.803 perplexity: 690.075 speed: 3833 wps
+ 0.903 perplexity: 688.689 speed: 3840 wps
+Epoch: 3 Train Perplexity: 687.783
+Epoch: 3 Valid Perplexity: 688.708
+VALID PERPLEXITY_+_+_++__+_
+688.7078771
+better performance
+3
+lr_decay
+0.25
+Epoch: 4 Learning rate: 0.250
+0.004 perplexity: 719.797 speed: 3981 wps
+0.104 perplexity: 676.470 speed: 3810 wps
+0.204 perplexity: 691.972 speed: 3850 wps
+0.304 perplexity: 692.505 speed: 3853 wps
+0.404 perplexity: 696.518 speed: 3860 wps
+0.504 perplexity: 697.250 speed: 3865 wps
+0.604 perplexity: 692.629 speed: 3871 wps
+0.703 perplexity: 689.788 speed: 3873 wps
+0.803 perplexity: 688.741 speed: 3876 wps
+0.903 perplexity: 687.386 speed: 3876 wps
+Epoch: 4 Train Perplexity: 686.488
+Epoch: 4 Valid Perplexity: 684.478
+VALID PERPLEXITY_+_+_++__+_
+684.477615068
+better performance
+4
+lr_decay
+0.125
+Epoch: 5 Learning rate: 0.125
+0.004 perplexity: 714.132 speed: 3791 wps
+0.104 perplexity: 675.947 speed: 3896 wps
+0.204 perplexity: 691.611 speed: 3879 wps
+0.304 perplexity: 691.938 speed: 3879 wps
+0.404 perplexity: 696.580 speed: 3881 wps
+0.504 perplexity: 697.048 speed: 3878 wps
+0.604 perplexity: 692.376 speed: 3859 wps
+0.703 perplexity: 689.309 speed: 3861 wps
+0.803 perplexity: 688.197 speed: 3862 wps
+0.903 perplexity: 686.783 speed: 3843 wps
+Epoch: 5 Train Perplexity: 685.899
+Epoch: 5 Valid Perplexity: 682.548
+VALID PERPLEXITY_+_+_++__+_
+682.547711252
+better performance
+5
+lr_decay
+0.0625
+Epoch: 6 Learning rate: 0.062
+0.004 perplexity: 708.015 speed: 3477 wps
+0.104 perplexity: 675.503 speed: 3810 wps
+0.204 perplexity: 691.175 speed: 3807 wps
+0.304 perplexity: 691.839 speed: 3810 wps
+0.404 perplexity: 696.419 speed: 3828 wps
+0.504 perplexity: 696.736 speed: 3832 wps
+0.604 perplexity: 692.175 speed: 3825 wps
+0.703 perplexity: 688.996 speed: 3825 wps
+0.803 perplexity: 687.888 speed: 3830 wps
+0.903 perplexity: 686.747 speed: 3832 wps
+Epoch: 6 Train Perplexity: 685.729
+Epoch: 6 Valid Perplexity: 681.266
+VALID PERPLEXITY_+_+_++__+_
+681.266414168
+better performance
+6
+lr_decay
+0.03125
+Epoch: 7 Learning rate: 0.031
+0.004 perplexity: 676.757 speed: 3892 wps
+0.104 perplexity: 675.918 speed: 3811 wps
+0.204 perplexity: 691.172 speed: 3857 wps
+0.304 perplexity: 691.961 speed: 3851 wps
+0.404 perplexity: 696.291 speed: 3843 wps
+0.504 perplexity: 696.484 speed: 3843 wps
+0.604 perplexity: 691.946 speed: 3850 wps
+0.703 perplexity: 688.950 speed: 3849 wps
+0.803 perplexity: 687.605 speed: 3845 wps
+0.903 perplexity: 686.550 speed: 3848 wps
+Epoch: 7 Train Perplexity: 685.636
+Epoch: 7 Valid Perplexity: 680.587
+VALID PERPLEXITY_+_+_++__+_
+680.587167301
+better performance
+7
+lr_decay
+0.015625
+Epoch: 8 Learning rate: 0.016
+0.004 perplexity: 657.323 speed: 3867 wps
+0.104 perplexity: 676.084 speed: 3845 wps
+0.204 perplexity: 691.106 speed: 3860 wps
+0.304 perplexity: 692.051 speed: 3790 wps
+0.404 perplexity: 696.355 speed: 3800 wps
+0.504 perplexity: 696.531 speed: 3802 wps
+0.604 perplexity: 691.914 speed: 3812 wps
+0.703 perplexity: 689.040 speed: 3820 wps
+0.803 perplexity: 687.599 speed: 3817 wps
+0.903 perplexity: 686.466 speed: 3823 wps
+Epoch: 8 Train Perplexity: 685.663
+Epoch: 8 Valid Perplexity: 680.249
+VALID PERPLEXITY_+_+_++__+_
+680.249471187
+better performance
+8
+lr_decay
+0.0078125
+Epoch: 9 Learning rate: 0.008
+0.004 perplexity: 666.981 speed: 3963 wps
+0.104 perplexity: 676.169 speed: 3830 wps
+0.204 perplexity: 690.895 speed: 3849 wps
+0.304 perplexity: 692.310 speed: 3848 wps
+0.404 perplexity: 696.310 speed: 3849 wps
+0.504 perplexity: 696.631 speed: 3854 wps
+0.604 perplexity: 691.796 speed: 3863 wps
+0.703 perplexity: 689.196 speed: 3857 wps
+0.803 perplexity: 687.561 speed: 3855 wps
+0.903 perplexity: 686.371 speed: 3855 wps
+Epoch: 9 Train Perplexity: 685.687
+Epoch: 9 Valid Perplexity: 680.073
+VALID PERPLEXITY_+_+_++__+_
+680.072792429
+better performance
+9
+lr_decay
+0.00390625
+Epoch: 10 Learning rate: 0.004
+0.004 perplexity: 662.200 speed: 3802 wps
+0.104 perplexity: 676.003 speed: 3869 wps
+0.204 perplexity: 690.739 speed: 3861 wps
+0.304 perplexity: 692.149 speed: 3864 wps
+0.404 perplexity: 696.357 speed: 3868 wps
+0.504 perplexity: 696.656 speed: 3866 wps
+0.604 perplexity: 691.721 speed: 3865 wps
+0.703 perplexity: 689.116 speed: 3842 wps
+0.803 perplexity: 687.530 speed: 3844 wps
+0.903 perplexity: 686.130 speed: 3841 wps
+Epoch: 10 Train Perplexity: 685.604
+Epoch: 10 Valid Perplexity: 680.016
+VALID PERPLEXITY_+_+_++__+_
+680.016432799
+better performance
+Test Perplexity: 639.449
+Train Time in Minutes: 41.9935041189
+Saving model to ./runs/lstm_no_i_gate.
+The score was:
+4
+Traceback (most recent call last):
+  File "ptb_word_lm.py", line 542, in <module>
+    tf.app.run()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv))
+  File "ptb_word_lm.py", line 538, in main
+    session, m, 'baseline_gru_batch_size_100_hidden_size_300.png')
+  File "ptb_word_lm.py", line 396, in visualize_tsne
+    fig, ax = plt.subplots()
+  File "/usr/lib/pymodules/python2.7/matplotlib/pyplot.py", line 1046, in subplots
+    fig = figure(**fig_kw)
+  File "/usr/lib/pymodules/python2.7/matplotlib/pyplot.py", line 423, in figure
+    **kwargs)
+  File "/usr/lib/pymodules/python2.7/matplotlib/backends/backend_tkagg.py", line 79, in new_figure_manager
+    return new_figure_manager_given_figure(num, figure)
+  File "/usr/lib/pymodules/python2.7/matplotlib/backends/backend_tkagg.py", line 87, in new_figure_manager_given_figure
+    window = Tk.Tk()
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1767, in __init__
+    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+_tkinter.TclError: no display name and no $DISPLAY environment variable
+ubuntu@ip-172-31-14-55:~/A3$  ls
+__init__.py  ptb_word_lm.py  reader.py  reader.pyc  rnn_cell.py  rnn_cell.pyc  runs  simple-examples
+ubuntu@ip-172-31-14-55:~/A3$ cd runs
+ubuntu@ip-172-31-14-55:~/A3/runs$ ls
+checkpoint  lstm_no_i_gate  lstm_no_i_gate-23230  lstm_no_i_gate-23230.meta
+ubuntu@ip-172-31-14-55:~/A3/runs$ cd ..
+ubuntu@ip-172-31-14-55:~/A3$ zip -r lstm_no_i_gate.zip runs
+  adding: runs/ (stored 0%)
+  adding: runs/lstm_no_i_gate-23230 (deflated 9%)
+  adding: runs/lstm_no_i_gate/ (stored 0%)
+  adding: runs/lstm_no_i_gate/model.ckpt-5640 (deflated 9%)
+  adding: runs/lstm_no_i_gate/model.ckpt-5640.meta (deflated 69%)
+  adding: runs/lstm_no_i_gate/model.ckpt-16783.meta (deflated 69%)
+  adding: runs/lstm_no_i_gate/graph.pbtxt (deflated 88%)
+  adding: runs/lstm_no_i_gate/events.out.tfevents.1478306534.ip-172-31-14-55 (deflated 69%)
+  adding: runs/lstm_no_i_gate/model.ckpt-16783 (deflated 9%)
+  adding: runs/lstm_no_i_gate/model.ckpt-11270.meta (deflated 69%)
+  adding: runs/lstm_no_i_gate/model.ckpt-22390.meta (deflated 69%)
+  adding: runs/lstm_no_i_gate/model.ckpt-11270 (deflated 9%)
+  adding: runs/lstm_no_i_gate/model.ckpt-22390 (deflated 9%)
+  adding: runs/lstm_no_i_gate/checkpoint (deflated 73%)
+  adding: runs/lstm_no_i_gate-23230.meta (deflated 69%)
+  adding: runs/checkpoint (deflated 73%)
+ubuntu@ip-172-31-14-55:~/A3$ ls
+__init__.py         ptb_word_lm.py  reader.pyc   rnn_cell.pyc  simple-examples
+lstm_no_i_gate.zip  reader.py       rnn_cell.py  runs
+ubuntu@ip-172-31-14-55:~/A3$ ls
+__init__.py         ptb_word_lm.py  reader.pyc   rnn_cell.pyc  simple-examples
+lstm_no_i_gate.zip  reader.py       rnn_cell.py  runs
+ubuntu@ip-172-31-14-55:~/A3$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/lstm_no_out_gate
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcublas.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcufft.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcurand.so.7.5 locally
+E tensorflow/stream_executor/cuda/cuda_driver.cc:491] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:140] kernel driver does not appear to be running on this host (ip-172-31-14-55): /proc/driver/nvidia/version does not exist
+I tensorflow/core/common_runtime/gpu/gpu_init.cc:81] No GPU devices available on machine.
+0
+lr_decay
+1.0
+Epoch: 1 Learning rate: 1.000
+0.004 perplexity: 14435.396 speed: 2052 wps
+0.104 perplexity: 2221.392 speed: 3785 wps
+0.204 perplexity: 2090.015 speed: 3846 wps
+0.304 perplexity: 2018.495 speed: 3880 wps
+0.404 perplexity: 1984.506 speed: 3896 wps
+0.504 perplexity: 1968.691 speed: 3905 wps
+0.604 perplexity: 1949.462 speed: 3899 wps
+0.703 perplexity: 1937.781 speed: 3890 wps
+0.803 perplexity: 1901.090 speed: 3894 wps
+0.903 perplexity: 1877.472 speed: 3890 wps
+Epoch: 1 Train Perplexity: 1859.506
+Epoch: 1 Valid Perplexity: 10111.389
+VALID PERPLEXITY_+_+_++__+_
+10111.3891791
+steps_taken
+0
+1
+lr_decay
+1.0
+Epoch: 2 Learning rate: 1.000
+0.004 perplexity: 1722.908 speed: 3965 wps
+0.104 perplexity: 1493.551 speed: 3859 wps
+0.204 perplexity: 1483.126 speed: 3862 wps
+0.304 perplexity: 1461.097 speed: 3852 wps
+0.404 perplexity: 1443.558 speed: 3854 wps
+0.504 perplexity: 1427.721 speed: 3855 wps
+0.604 perplexity: 1413.277 speed: 3849 wps
+0.703 perplexity: 1410.133 speed: 3846 wps
+0.803 perplexity: 1405.792 speed: 3844 wps
+0.903 perplexity: 1400.903 speed: 3845 wps
+Epoch: 2 Train Perplexity: 1398.751
+Epoch: 2 Valid Perplexity: 1889.244
+VALID PERPLEXITY_+_+_++__+_
+1889.24431215
+better performance
+2
+lr_decay
+0.5
+Epoch: 3 Learning rate: 0.500
+0.004 perplexity: 964.472 speed: 3880 wps
+0.104 perplexity: 788.288 speed: 3807 wps
+0.204 perplexity: 800.472 speed: 3835 wps
+0.304 perplexity: 799.209 speed: 3847 wps
+0.404 perplexity: 800.972 speed: 3851 wps
+0.504 perplexity: 801.380 speed: 3817 wps
+0.604 perplexity: 797.561 speed: 3822 wps
+0.703 perplexity: 796.854 speed: 3831 wps
+0.803 perplexity: 795.363 speed: 3835 wps
+0.903 perplexity: 792.990 speed: 3835 wps
+Epoch: 3 Train Perplexity: 791.827
+Epoch: 3 Valid Perplexity: 739.894
+VALID PERPLEXITY_+_+_++__+_
+739.893611618
+better performance
+3
+lr_decay
+0.25
+Epoch: 4 Learning rate: 0.250
+0.004 perplexity: 730.371 speed: 3808 wps
+0.104 perplexity: 687.117 speed: 3890 wps
+0.204 perplexity: 701.932 speed: 3889 wps
+0.304 perplexity: 702.480 speed: 3886 wps
+0.404 perplexity: 706.440 speed: 3877 wps
+0.504 perplexity: 706.795 speed: 3874 wps
+0.604 perplexity: 702.458 speed: 3874 wps
+0.703 perplexity: 699.775 speed: 3875 wps
+0.803 perplexity: 698.841 speed: 3868 wps
+0.903 perplexity: 697.417 speed: 3869 wps
+Epoch: 4 Train Perplexity: 696.602
+Epoch: 4 Valid Perplexity: 713.281
+VALID PERPLEXITY_+_+_++__+_
+713.281433013
+better performance
+4
+lr_decay
+0.125
+Epoch: 5 Learning rate: 0.125
+0.004 perplexity: 718.903 speed: 3929 wps
+0.104 perplexity: 679.805 speed: 3855 wps
+0.204 perplexity: 694.998 speed: 3867 wps
+0.304 perplexity: 695.119 speed: 3845 wps
+0.404 perplexity: 699.189 speed: 3851 wps
+0.504 perplexity: 699.455 speed: 3843 wps
+0.604 perplexity: 694.929 speed: 3850 wps
+0.703 perplexity: 691.814 speed: 3852 wps
+0.803 perplexity: 690.645 speed: 3849 wps
+0.903 perplexity: 689.230 speed: 3834 wps
+Epoch: 5 Train Perplexity: 688.318
+Epoch: 5 Valid Perplexity: 696.503
+VALID PERPLEXITY_+_+_++__+_
+696.503143744
+better performance
+5
+lr_decay
+0.0625
+Epoch: 6 Learning rate: 0.062
+0.004 perplexity: 711.175 speed: 3876 wps
+0.104 perplexity: 677.240 speed: 3868 wps
+0.204 perplexity: 693.094 speed: 3864 wps
+0.304 perplexity: 693.376 speed: 3857 wps
+0.404 perplexity: 697.750 speed: 3867 wps
+0.504 perplexity: 697.832 speed: 3867 wps
+0.604 perplexity: 693.357 speed: 3877 wps
+0.703 perplexity: 690.138 speed: 3869 wps
+0.803 perplexity: 688.927 speed: 3872 wps
+0.903 perplexity: 687.640 speed: 3872 wps
+Epoch: 6 Train Perplexity: 686.551
+Epoch: 6 Valid Perplexity: 689.060
+VALID PERPLEXITY_+_+_++__+_
+689.059782082
+better performance
+6
+lr_decay
+0.03125
+Epoch: 7 Learning rate: 0.031
+0.004 perplexity: 679.145 speed: 3878 wps
+0.104 perplexity: 676.752 speed: 3886 wps
+0.204 perplexity: 692.330 speed: 3884 wps
+0.304 perplexity: 693.197 speed: 3872 wps
+0.404 perplexity: 697.348 speed: 3869 wps
+0.504 perplexity: 697.230 speed: 3866 wps
+0.604 perplexity: 692.698 speed: 3859 wps
+0.703 perplexity: 689.652 speed: 3849 wps
+0.803 perplexity: 688.139 speed: 3847 wps
+0.903 perplexity: 686.883 speed: 3846 wps
+Epoch: 7 Train Perplexity: 685.859
+Epoch: 7 Valid Perplexity: 686.618
+VALID PERPLEXITY_+_+_++__+_
+686.618078523
+better performance
+7
+lr_decay
+0.015625
+Epoch: 8 Learning rate: 0.016
+0.004 perplexity: 658.492 speed: 3811 wps
+0.104 perplexity: 676.512 speed: 3834 wps
+0.204 perplexity: 691.706 speed: 3841 wps
+0.304 perplexity: 692.552 speed: 3781 wps
+0.404 perplexity: 696.855 speed: 3815 wps
+0.504 perplexity: 696.811 speed: 3826 wps
+0.604 perplexity: 692.195 speed: 3835 wps
+0.703 perplexity: 689.276 speed: 3848 wps
+0.803 perplexity: 687.621 speed: 3845 wps
+0.903 perplexity: 686.308 speed: 3843 wps
+Epoch: 8 Train Perplexity: 685.407
+Epoch: 8 Valid Perplexity: 684.980
+VALID PERPLEXITY_+_+_++__+_
+684.980147556
+better performance
+8
+lr_decay
+0.0078125
+Epoch: 9 Learning rate: 0.008
+0.004 perplexity: 667.944 speed: 3980 wps
+0.104 perplexity: 676.447 speed: 3886 wps
+0.204 perplexity: 691.038 speed: 3885 wps
+0.304 perplexity: 692.480 speed: 3883 wps
+0.404 perplexity: 696.566 speed: 3885 wps
+0.504 perplexity: 696.761 speed: 3890 wps
+0.604 perplexity: 691.899 speed: 3891 wps
+0.703 perplexity: 689.276 speed: 3895 wps
+0.803 perplexity: 687.517 speed: 3896 wps
+0.903 perplexity: 686.164 speed: 3899 wps
+Epoch: 9 Train Perplexity: 685.367
+Epoch: 9 Valid Perplexity: 684.172
+VALID PERPLEXITY_+_+_++__+_
+684.172371866
+better performance
+9
+lr_decay
+0.00390625
+Epoch: 10 Learning rate: 0.004
+0.004 perplexity: 664.203 speed: 3976 wps
+0.104 perplexity: 676.325 speed: 3897 wps
+0.204 perplexity: 690.931 speed: 3907 wps
+0.304 perplexity: 692.399 speed: 3908 wps
+0.404 perplexity: 696.672 speed: 3906 wps
+0.504 perplexity: 696.875 speed: 3905 wps
+0.604 perplexity: 691.871 speed: 3902 wps
+0.703 perplexity: 689.191 speed: 3880 wps
+0.803 perplexity: 687.474 speed: 3882 wps
+0.903 perplexity: 685.927 speed: 3881 wps
+Epoch: 10 Train Perplexity: 685.275
+Epoch: 10 Valid Perplexity: 683.667
+VALID PERPLEXITY_+_+_++__+_
+683.667266976
+better performance
+Test Perplexity: 639.379
+Train Time in Minutes: 41.8259670496
+Saving model to ./runs/lstm_no_out_gate.
+The score was:
+6
+Traceback (most recent call last):
+  File "ptb_word_lm.py", line 542, in <module>
+    tf.app.run()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv))
+  File "ptb_word_lm.py", line 538, in main
+    session, m, 'baseline_gru_batch_size_100_hidden_size_300.png')
+  File "ptb_word_lm.py", line 396, in visualize_tsne
+    fig, ax = plt.subplots()
+  File "/usr/lib/pymodules/python2.7/matplotlib/pyplot.py", line 1046, in subplots
+    fig = figure(**fig_kw)
+  File "/usr/lib/pymodules/python2.7/matplotlib/pyplot.py", line 423, in figure
+    **kwargs)
+  File "/usr/lib/pymodules/python2.7/matplotlib/backends/backend_tkagg.py", line 79, in new_figure_manager
+    return new_figure_manager_given_figure(num, figure)
+  File "/usr/lib/pymodules/python2.7/matplotlib/backends/backend_tkagg.py", line 87, in new_figure_manager_given_figure
+    window = Tk.Tk()
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1767, in __init__
+    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+_tkinter.TclError: no display name and no $DISPLAY environment variable
+ubuntu@ip-172-31-14-55:~/A3$ ls
+__init__.py         ptb_word_lm.py  reader.pyc   rnn_cell.pyc  simple-examples
+lstm_no_i_gate.zip  reader.py       rnn_cell.py  runs
+ubuntu@ip-172-31-14-55:~/A3$ cd runs/
+ubuntu@ip-172-31-14-55:~/A3/runs$ ls
+checkpoint      lstm_no_i_gate-23230       lstm_no_out_gate        lstm_no_out_gate-23230.meta
+lstm_no_i_gate  lstm_no_i_gate-23230.meta  lstm_no_out_gate-23230
+ubuntu@ip-172-31-14-55:~/A3/runs$ zip -r lstm_no_out_gate.zip lstm_no_out_gate lstm_no_out_gate-23230.meta lstm_no_out_gate-23230
+  adding: lstm_no_out_gate/ (stored 0%)
+  adding: lstm_no_out_gate/model.ckpt-5628 (deflated 9%)
+  adding: lstm_no_out_gate/model.ckpt-11244.meta (deflated 69%)
+  adding: lstm_no_out_gate/model.ckpt-16782.meta (deflated 69%)
+  adding: lstm_no_out_gate/model.ckpt-5628.meta (deflated 69%)
+  adding: lstm_no_out_gate/graph.pbtxt (deflated 88%)
+  adding: lstm_no_out_gate/model.ckpt-22442 (deflated 9%)
+  adding: lstm_no_out_gate/model.ckpt-11244 (deflated 9%)
+  adding: lstm_no_out_gate/model.ckpt-16782 (deflated 9%)
+  adding: lstm_no_out_gate/model.ckpt-22442.meta (deflated 69%)
+  adding: lstm_no_out_gate/events.out.tfevents.1478310039.ip-172-31-14-55 (deflated 69%)
+  adding: lstm_no_out_gate/checkpoint (deflated 72%)
+  adding: lstm_no_out_gate-23230.meta (deflated 69%)
+  adding: lstm_no_out_gate-23230 (deflated 9%)
+ubuntu@ip-172-31-14-55:~/A3/runs$ ls
+checkpoint      lstm_no_i_gate-23230       lstm_no_out_gate        lstm_no_out_gate-23230.meta
+lstm_no_i_gate  lstm_no_i_gate-23230.meta  lstm_no_out_gate-23230  lstm_no_out_gate.zip
+ubuntu@ip-172-31-14-55:~/A3/runs$ mv ../ lstm_no_out_gate.zip 
+mv: cannot overwrite non-directory ‘lstm_no_out_gate.zip’ with directory ‘../’
+ubuntu@ip-172-31-14-55:~/A3/runs$ cd ..
+ubuntu@ip-172-31-14-55:~/A3$ ls
+__init__.py         ptb_word_lm.py  reader.pyc   rnn_cell.pyc  simple-examples
+lstm_no_i_gate.zip  reader.py       rnn_cell.py  runs
+ubuntu@ip-172-31-14-55:~/A3$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/gru_lr5_h2k
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcublas.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcufft.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcurand.so.7.5 locally
+E tensorflow/stream_executor/cuda/cuda_driver.cc:491] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:140] kernel driver does not appear to be running on this host (ip-172-31-14-55): /proc/driver/nvidia/version does not exist
+I tensorflow/core/common_runtime/gpu/gpu_init.cc:81] No GPU devices available on machine.
+i in max_epoch
+0
+lr_decay
+1.0
+Epoch: 1 Learning rate: 1.000
+0.004 perplexity: 223297.812 speed: 241 wps
+0.104 perplexity: 42954839.597 speed: 273 wps
+0.204 perplexity: 13066364.630 speed: 277 wps
+^CTraceback (most recent call last):
+  File "ptb_word_lm.py", line 543, in <module>
+    tf.app.run()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv))
+  File "ptb_word_lm.py", line 493, in main
+    verbose=True)
+  File "ptb_word_lm.py", line 344, in run_epoch
+    vals = session.run(fetches, feed_dict)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 710, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 908, in _run
+    feed_dict_string, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 958, in _do_run
+    target_list, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 965, in _do_call
+    return fn(*args)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 947, in _run_fn
+    status, run_metadata)
+KeyboardInterrupt
+ubuntu@ip-172-31-14-55:~/A3$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/gru_lr5_h5
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcublas.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcufft.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcurand.so.7.5 locally
+E tensorflow/stream_executor/cuda/cuda_driver.cc:491] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:140] kernel driver does not appear to be running on this host (ip-172-31-14-55): /proc/driver/nvidia/version does not exist
+I tensorflow/core/common_runtime/gpu/gpu_init.cc:81] No GPU devices available on machine.
+i in max_epoch
+0
+lr_decay
+1.0
+Epoch: 1 Learning rate: 1.000
+0.004 perplexity: 197962.966 speed: 1076 wps
+0.104 perplexity: 18575760.152 speed: 1601 wps
+0.204 perplexity: 11796581.317 speed: 1641 wps
+0.304 perplexity: 27247686.103 speed: 1622 wps
+0.404 perplexity: 30635597.966 speed: 1623 wps
+0.504 perplexity: 26117285.954 speed: 1629 wps
+0.604 perplexity: 102399304.181 speed: 1635 wps
+0.703 perplexity: 324909764.468 speed: 1631 wps
+0.803 perplexity: 803962041.920 speed: 1633 wps
+0.903 perplexity: 1531469634.614 speed: 1638 wps
+Epoch: 1 Train Perplexity: 2633838185.863
+Epoch: 1 Valid Perplexity: 5970283856.445
+VALID PERPLEXITY_+_+_++__+_
+5970283856.44
+steps_taken
+0
+i in max_epoch
+1
+lr_decay
+1.0
+Epoch: 2 Learning rate: 1.000
+0.004 perplexity: 13182986918.497 speed: 1711 wps
+0.104 perplexity: 74942068.057 speed: 1641 wps
+0.204 perplexity: 14090083.566 speed: 1655 wps
+0.304 perplexity: 4271859.333 speed: 1651 wps
+0.404 perplexity: 17110206.572 speed: 1647 wps
+0.504 perplexity: 16456509.209 speed: 1650 wps
+0.604 perplexity: 8376118.058 speed: 1650 wps
+0.703 perplexity: 7842133.892 speed: 1646 wps
+0.803 perplexity: 26711440.179 speed: 1651 wps
+0.903 perplexity: 21212467.921 speed: 1653 wps
+Epoch: 2 Train Perplexity: 18830350.273
+Epoch: 2 Valid Perplexity: 223139.498
+VALID PERPLEXITY_+_+_++__+_
+223139.497602
+better performance
+i in max_epoch
+2
+lr_decay
+1.0
+Epoch: 3 Learning rate: 1.000
+0.004 perplexity: 515208.864 speed: 1716 wps
+0.104 perplexity: 499813.140 speed: 1620 wps
+0.204 perplexity: 1352245.573 speed: 1637 wps
+0.304 perplexity: 1215309.378 speed: 1647 wps
+0.404 perplexity: 8028124.711 speed: 1652 wps
+0.504 perplexity: 16946793.670 speed: 1654 wps
+0.604 perplexity: 69895253.934 speed: 1656 wps
+0.703 perplexity: 232557463.201 speed: 1658 wps
+0.803 perplexity: 609484428.376 speed: 1655 wps
+0.903 perplexity: 1252641901.731 speed: 1657 wps
+Epoch: 3 Train Perplexity: 2446269608.559
+Epoch: 3 Valid Perplexity: 3564193753169.104
+VALID PERPLEXITY_+_+_++__+_
+3.56419375317e+12
+steps_taken
+1
+i in max_epoch
+3
+lr_decay
+0.5
+Epoch: 4 Learning rate: 0.500
+0.004 perplexity: 26448302.655 speed: 1650 wps
+0.104 perplexity: 2527076.178 speed: 1616 wps
+0.204 perplexity: 1906960.252 speed: 1646 wps
+0.304 perplexity: 1907003.009 speed: 1644 wps
+0.404 perplexity: 1780534.354 speed: 1644 wps
+0.504 perplexity: 1807071.422 speed: 1649 wps
+0.604 perplexity: 1837630.357 speed: 1649 wps
+0.703 perplexity: 1895438.666 speed: 1645 wps
+0.803 perplexity: 1923358.253 speed: 1649 wps
+0.903 perplexity: 1914222.507 speed: 1647 wps
+Epoch: 4 Train Perplexity: 1974177.577
+Epoch: 4 Valid Perplexity: 12911226.470
+VALID PERPLEXITY_+_+_++__+_
+12911226.4704
+better performance
+i in max_epoch
+4
+lr_decay
+0.25
+Epoch: 5 Learning rate: 0.250
+0.004 perplexity: 43355.510 speed: 1722 wps
+0.104 perplexity: 12173.494 speed: 1682 wps
+0.204 perplexity: 11318.684 speed: 1656 wps
+0.304 perplexity: 11326.541 speed: 1656 wps
+0.404 perplexity: 10983.131 speed: 1652 wps
+^CTraceback (most recent call last):
+  File "ptb_word_lm.py", line 543, in <module>
+    tf.app.run()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv))
+  File "ptb_word_lm.py", line 493, in main
+    verbose=True)
+  File "ptb_word_lm.py", line 344, in run_epoch
+    vals = session.run(fetches, feed_dict)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 710, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 908, in _run
+    feed_dict_string, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 958, in _do_run
+    target_list, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 965, in _do_call
+    return fn(*args)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 947, in _run_fn
+    status, run_metadata)
+KeyboardInterrupt
+ubuntu@ip-172-31-14-55:~/A3$ 
+Broadcast message from root@ip-172-31-14-55
+	(unknown) at 3:48 ...
+
+The system is going down for power off NOW!
+Connection to ec2-54-172-121-112.compute-1.amazonaws.com closed by remote host.
+Connection to ec2-54-172-121-112.compute-1.amazonaws.com closed.
+MacBook-Pro-5:~ matthewdunn$ 

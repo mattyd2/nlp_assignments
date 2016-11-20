@@ -81,7 +81,7 @@ def re_pickle():
     dh.pickle_data(to_pickle, labels, FLAGS.N_grams)
 
 # comment out this line to load data from pickle files
-# re_pickle()
+re_pickle()
 
 start = time.time()
 x_train, y_train, x_val, y_val, x_test, y_test, vocab_processor = dh.get_pickled_data(labels, FLAGS.N_grams)

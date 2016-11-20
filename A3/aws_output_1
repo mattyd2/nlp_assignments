@@ -1,0 +1,1064 @@
+Last login: Fri Nov  4 17:51:29 on ttys004
+MacBook-Pro-5:~ matthewdunn$ ssh -i "/Users/matthewdunn/Dropbox/NYU/mattyd.pem" ubuntu@ec2-52-91-104-39.compute-1.amazonaws.com
+ssh: connect to host ec2-52-91-104-39.compute-1.amazonaws.com port 22: Connection refused
+MacBook-Pro-5:~ matthewdunn$ ssh -i "/Users/matthewdunn/Dropbox/NYU/mattyd.pem" ubuntu@ec2-52-91-104-39.compute-1.amazonaws.com
+The authenticity of host 'ec2-52-91-104-39.compute-1.amazonaws.com (52.91.104.39)' can't be established.
+ECDSA key fingerprint is SHA256:ucbOLk7HTr/GQkoDVUYdOVijlaLKm2TH6xs+8Eicq7Q.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-52-91-104-39.compute-1.amazonaws.com,52.91.104.39' (ECDSA) to the list of known hosts.
+
+
+########################################################################################################################
+########################################################################################################################
+
+  ____  _ _    __           _               _
+ | __ )(_) |_ / _|_   _ ___(_) ___  _ __   (_) ___
+ |  _ \| | __| |_| | | / __| |/ _ \| '_ \  | |/ _ \
+ | |_) | | |_|  _| |_| \__ \ | (_) | | | |_| | (_) |
+ |____/|_|\__|_|  \__,_|___/_|\___/|_| |_(_)_|\___/
+
+
+Welcome to Bitfusion Ubuntu 14 Tensorflow - Ubuntu 14.04 LTS (GNU/Linux 3.13.0-95-generic x86_64)
+
+This AMI is brought to you by Bitfusion.io
+http://www.bitfusion.io
+
+Please email all feedback and support requests to:
+support@bitfusion.io
+
+We would love to hear from you! Contact us with any feedback or a feature request at the email above.
+
+########################################################################################################################
+########################################################################################################################
+
+
+
+########################################################################################################################
+########################################################################################################################
+
+                                           BITFUSION EMAIL OPT IN                                                       
+
+Register your email address to be entered into our monthly draw for Bitfusion t-shirts and  occasional hardware         
+goodies.  Additionally you will receive product updates and information about new offerings from Bitfusion.
+
+########################################################################################################################
+########################################################################################################################
+
+Would you like to register with Bitfusion.io? [y/n] n
+
+Thank you for using the Bitfusion Ubuntu 14 Tensorflow
+
+Please review the README located at /home/ubuntu/README for more details on how to use this AMI
+
+ubuntu@ip-172-31-57-43:~$ pip list
+apt-xapian-index (0.45)
+awscli (1.10.63)
+backports.shutil-get-terminal-size (1.0.0)
+beautifulsoup4 (4.2.1)
+boto3 (1.1.1)
+botocore (1.4.53)
+certifi (2015.4.28)
+chardet (2.0.1)
+Cheetah (2.4.4)
+circus (0.14.0)
+cloud-init (0.7.5)
+colorama (0.2.5)
+configobj (4.7.2)
+configparser (3.5.0)
+cvxopt (1.1.4)
+decorator (3.4.0)
+docutils (0.12)
+entrypoints (0.2.2)
+enum34 (1.1.6)
+filelock (2.0.6)
+funcsigs (1.0.2)
+functools32 (3.2.3.post2)
+futures (2.2.0)
+grpcio (1.0.0)
+h5py (2.6.0)
+html5lib (0.999)
+iowait (0.2)
+ipykernel (4.5.0)
+ipython (5.1.0)
+ipython-genutils (0.1.0)
+ipywidgets (5.2.2)
+Jinja2 (2.7.2)
+jmespath (0.9.0)
+joblib (0.7.1)
+jsonpatch (1.3)
+jsonpointer (1.0)
+jsonschema (2.5.1)
+jupyter (1.0.0)
+jupyter-client (4.4.0)
+jupyter-console (5.0.0)
+jupyter-core (4.2.0)
+Keras (1.0.8)
+Landscape-Client (14.12)
+M2Crypto (0.21.1)
+MarkupSafe (0.18)
+matplotlib (1.3.1)
+midi (0.2.3)
+mistune (0.7.3)
+mock (2.0.0)
+msgpack-python (0.4.6)
+MySQL-python (1.2.3)
+nbconvert (4.2.0)
+nbformat (4.1.0)
+newrelic-api (1.0.4)
+nose (1.3.1)
+notebook (4.2.2)
+numexpr (2.2.2)
+numpy (1.11.1)
+oauth (1.0.1)
+openpyxl (1.7.0)
+PAM (0.4.2)
+pandas (0.13.1)
+pathlib2 (2.1.0)
+patsy (0.2.1)
+pbr (1.10.0)
+pexpect (4.2.1)
+pickleshare (0.7.4)
+Pillow (2.3.0)
+pip (8.1.2)
+pretty-midi (0.2.4)
+prettytable (0.7.2)
+prompt-toolkit (1.0.7)
+protobuf (3.0.0)
+psutil (4.3.1)
+ptyprocess (0.5.1)
+pyaml (16.9.0)
+pyasn1 (0.1.9)
+pycrypto (2.6.1)
+pycups (1.9.66)
+pycurl (7.19.3)
+pydot (1.0.28)
+Pygments (2.1.3)
+pygobject (3.12.0)
+pyOpenSSL (0.13)
+pyparsing (2.0.1)
+pyserial (2.6)
+pysmbc (1.0.14.1)
+python-apt (0.9.3.5ubuntu2)
+python-dateutil (2.5.3)
+python-debian (0.1.21-nmu2ubuntu2)
+pytz (2012rc0)
+PyYAML (3.12)
+pyzmq (14.0.1)
+qtconsole (4.2.1)
+requests (2.2.1)
+rsa (3.4.2)
+s3transfer (0.1.3)
+salt (2016.3.1)
+scikit-learn (0.17.1)
+scipy (0.13.3)
+setuptools (27.1.2)
+simplegeneric (0.8.1)
+simplejson (3.3.1)
+six (1.10.0)
+ssh-import-id (3.21)
+statsmodels (0.5.0)
+system-service (0.1.6)
+tables (3.1.1)
+tensorflow (0.10.0)
+terminado (0.6)
+tflearn (0.2.1)
+Theano (0.8.2)
+tornado (4.2.1)
+traitlets (4.3.0)
+Twisted-Core (13.2.0)
+Twisted-Names (13.2.0)
+Twisted-Web (13.2.0)
+urllib3 (1.7.1)
+virtualenv (15.0.3)
+wcwidth (0.1.7)
+wheel (0.29.0)
+widgetsnbextension (1.2.6)
+xlrd (0.9.2)
+xlwt (0.7.5)
+zope.interface (4.0.5)
+/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+  SNIMissingWarning
+/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+You are using pip version 8.1.2, however version 9.0.0 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+ubuntu@ip-172-31-57-43:~$ pip install tensorflow --upgrade
+/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+  SNIMissingWarning
+/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+Collecting tensorflow
+  Downloading tensorflow-0.11.0rc2-cp27-none-manylinux1_x86_64.whl (39.8MB)
+    100% |████████████████████████████████| 39.8MB 37kB/s 
+Requirement already up-to-date: protobuf==3.0.0 in /usr/local/lib/python2.7/dist-packages (from tensorflow)
+Collecting numpy>=1.11.0 (from tensorflow)
+  Downloading numpy-1.11.2-cp27-cp27mu-manylinux1_x86_64.whl (15.3MB)
+    100% |████████████████████████████████| 15.3MB 97kB/s 
+Requirement already up-to-date: wheel in /usr/local/lib/python2.7/dist-packages (from tensorflow)
+Requirement already up-to-date: mock>=2.0.0 in /usr/local/lib/python2.7/dist-packages (from tensorflow)
+Requirement already up-to-date: six>=1.10.0 in /usr/local/lib/python2.7/dist-packages (from tensorflow)
+Collecting setuptools (from protobuf==3.0.0->tensorflow)
+  Downloading setuptools-28.8.0-py2.py3-none-any.whl (472kB)
+    100% |████████████████████████████████| 481kB 3.1MB/s 
+Requirement already up-to-date: funcsigs>=1; python_version < "3.3" in /usr/local/lib/python2.7/dist-packages (from mock>=2.0.0->tensorflow)
+Requirement already up-to-date: pbr>=0.11 in /usr/local/lib/python2.7/dist-packages (from mock>=2.0.0->tensorflow)
+Installing collected packages: numpy, tensorflow, setuptools
+  Found existing installation: numpy 1.11.1
+    Uninstalling numpy-1.11.1:
+Exception:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/commands/install.py", line 317, in run
+    prefix=options.prefix_path,
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/req/req_set.py", line 736, in install
+    requirement.uninstall(auto_confirm=True)
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/req/req_install.py", line 742, in uninstall
+    paths_to_remove.remove(auto_confirm)
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/req/req_uninstall.py", line 115, in remove
+    renames(path, new_path)
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/utils/__init__.py", line 267, in renames
+    shutil.move(old, new)
+  File "/usr/lib/python2.7/shutil.py", line 303, in move
+    os.unlink(src)
+OSError: [Errno 13] Permission denied: '/usr/local/bin/f2py'
+You are using pip version 8.1.2, however version 9.0.0 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+ubuntu@ip-172-31-57-43:~$ ls
+bin  EULA  keras-examples  magenta  pynb  README  tensorflow  tf-serving
+ubuntu@ip-172-31-57-43:~$ mkdir A3
+ubuntu@ip-172-31-57-43:~$ cd A3
+ubuntu@ip-172-31-57-43:~/A3$ ls
+ubuntu@ip-172-31-57-43:~/A3$ mkdir simple-examples
+ubuntu@ip-172-31-57-43:~/A3$ cd simple-examples/
+ubuntu@ip-172-31-57-43:~/A3/simple-examples$ mkdir data
+ubuntu@ip-172-31-57-43:~/A3/simple-examples$ ls
+data
+ubuntu@ip-172-31-57-43:~/A3/simple-examples$ cd data/
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ pwd
+/home/ubuntu/A3/simple-examples/data
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ cd .
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ cd ..
+ubuntu@ip-172-31-57-43:~/A3/simple-examples$ cd ..
+ubuntu@ip-172-31-57-43:~/A3$ cd ..
+ubuntu@ip-172-31-57-43:~$ ls
+A3  bin  EULA  keras-examples  magenta  pynb  README  tensorflow  tf-serving
+ubuntu@ip-172-31-57-43:~$ ls
+A3  bin  EULA  keras-examples  magenta  pynb  README  tensorflow  tf-serving
+ubuntu@ip-172-31-57-43:~$ cd A
+-bash: cd: A: No such file or directory
+ubuntu@ip-172-31-57-43:~$ cd A3/
+ubuntu@ip-172-31-57-43:~/A3$ ls
+simple-examples
+ubuntu@ip-172-31-57-43:~/A3$ cd simple-examples/
+ubuntu@ip-172-31-57-43:~/A3/simple-examples$ cd data
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ ls
+__init__.py  ptb.test.txt  ptb.train.txt  ptb.valid.txt  ptb_word_lm.py  reader.py  rnn_cell.py  rnn_cell.pyc
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ mv ptb_word_lm.py ~/A3/
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ ls
+__init__.py  ptb.test.txt  ptb.train.txt  ptb.valid.txt  reader.py  rnn_cell.py  rnn_cell.pyc
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ mv reader.py ~/A3/
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ mv rnn_cell.py ~/A3/
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ ls
+__init__.py  ptb.test.txt  ptb.train.txt  ptb.valid.txt  rnn_cell.pyc
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ rm rnn_cell.pyc 
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ ls
+__init__.py  ptb.test.txt  ptb.train.txt  ptb.valid.txt
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ mv __init__.py ~/A3/
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ ls
+ptb.test.txt  ptb.train.txt  ptb.valid.txt
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ cd..
+cd ..
+cd..: command not found
+ubuntu@ip-172-31-57-43:~/A3/simple-examples/data$ cd ..
+ubuntu@ip-172-31-57-43:~/A3/simple-examples$ cd ..
+ubuntu@ip-172-31-57-43:~/A3$ ls
+__init__.py  ptb_word_lm.py  reader.py  rnn_cell.py  simple-examples
+ubuntu@ip-172-31-57-43:~/A3$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/grucell
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcublas.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcufft.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcurand.so.7.5 locally
+E tensorflow/stream_executor/cuda/cuda_driver.cc:491] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:140] kernel driver does not appear to be running on this host (ip-172-31-57-43): /proc/driver/nvidia/version does not exist
+I tensorflow/core/common_runtime/gpu/gpu_init.cc:81] No GPU devices available on machine.
+0
+lr_decay
+1.0
+Epoch: 1 Learning rate: 1.000
+0.004 perplexity: 12398.669 speed: 1128 wps
+0.104 perplexity: 2120.897 speed: 2170 wps
+0.204 perplexity: 1146.369 speed: 2228 wps
+0.304 perplexity: 803.512 speed: 2247 wps
+0.404 perplexity: 642.849 speed: 2259 wps
+0.504 perplexity: 549.051 speed: 2265 wps
+0.604 perplexity: 479.805 speed: 2268 wps
+0.703 perplexity: 433.653 speed: 2271 wps
+0.803 perplexity: 399.515 speed: 2273 wps
+0.903 perplexity: 369.698 speed: 2274 wps
+Epoch: 1 Train Perplexity: 348.511
+Epoch: 1 Valid Perplexity: 215.431
+VALID PERPLEXITY_+_+_++__+_
+215.430687649
+steps_taken
+0
+1
+lr_decay
+1.0
+Epoch: 2 Learning rate: 1.000
+0.004 perplexity: 232.926 speed: 2293 wps
+0.104 perplexity: 184.440 speed: 2281 wps
+0.204 perplexity: 193.149 speed: 2279 wps
+0.304 perplexity: 186.562 speed: 2280 wps
+0.404 perplexity: 184.465 speed: 2282 wps
+0.504 perplexity: 181.440 speed: 2256 wps
+0.604 perplexity: 177.235 speed: 2260 wps
+0.703 perplexity: 175.247 speed: 2263 wps
+0.803 perplexity: 173.392 speed: 2264 wps
+0.903 perplexity: 170.349 speed: 2266 wps
+Epoch: 2 Train Perplexity: 169.218
+Epoch: 2 Valid Perplexity: 191.834
+VALID PERPLEXITY_+_+_++__+_
+191.833577183
+better performance
+2
+lr_decay
+0.5
+Epoch: 3 Learning rate: 0.500
+0.004 perplexity: 181.415 speed: 2270 wps
+0.104 perplexity: 132.388 speed: 2278 wps
+0.204 perplexity: 138.831 speed: 2277 wps
+0.304 perplexity: 132.432 speed: 2276 wps
+0.404 perplexity: 130.210 speed: 2277 wps
+0.504 perplexity: 127.437 speed: 2277 wps
+0.604 perplexity: 123.780 speed: 2277 wps
+0.703 perplexity: 121.791 speed: 2278 wps
+0.803 perplexity: 119.813 speed: 2279 wps
+0.903 perplexity: 116.905 speed: 2267 wps
+Epoch: 3 Train Perplexity: 115.544
+Epoch: 3 Valid Perplexity: 144.175
+VALID PERPLEXITY_+_+_++__+_
+144.175434786
+better performance
+3
+lr_decay
+0.25
+Epoch: 4 Learning rate: 0.250
+0.004 perplexity: 117.053 speed: 2289 wps
+0.104 perplexity: 94.693 speed: 2284 wps
+0.204 perplexity: 101.655 speed: 2283 wps
+0.304 perplexity: 97.082 speed: 2283 wps
+0.404 perplexity: 95.861 speed: 2284 wps
+0.504 perplexity: 93.912 speed: 2285 wps
+0.604 perplexity: 91.341 speed: 2286 wps
+0.703 perplexity: 89.977 speed: 2287 wps
+0.803 perplexity: 88.466 speed: 2287 wps
+0.903 perplexity: 86.207 speed: 2288 wps
+Epoch: 4 Train Perplexity: 85.095
+Epoch: 4 Valid Perplexity: 132.472
+VALID PERPLEXITY_+_+_++__+_
+132.472320954
+better performance
+4
+lr_decay
+0.125
+Epoch: 5 Learning rate: 0.125
+0.004 perplexity: 88.367 speed: 2242 wps
+0.104 perplexity: 78.667 speed: 2293 wps
+0.204 perplexity: 84.742 speed: 2294 wps
+0.304 perplexity: 81.015 speed: 2257 wps
+0.404 perplexity: 79.993 speed: 2264 wps
+0.504 perplexity: 78.427 speed: 2269 wps
+0.604 perplexity: 76.286 speed: 2272 wps
+0.703 perplexity: 75.197 speed: 2274 wps
+0.803 perplexity: 73.901 speed: 2276 wps
+0.903 perplexity: 71.876 speed: 2277 wps
+Epoch: 5 Train Perplexity: 70.986
+Epoch: 5 Valid Perplexity: 129.090
+VALID PERPLEXITY_+_+_++__+_
+129.089716528
+better performance
+5
+lr_decay
+0.0625
+Epoch: 6 Learning rate: 0.062
+0.004 perplexity: 74.332 speed: 2291 wps
+0.104 perplexity: 71.212 speed: 2289 wps
+0.204 perplexity: 76.792 speed: 2286 wps
+0.304 perplexity: 73.382 speed: 2287 wps
+0.404 perplexity: 72.455 speed: 2289 wps
+0.504 perplexity: 71.132 speed: 2288 wps
+0.604 perplexity: 69.135 speed: 2288 wps
+0.703 perplexity: 68.175 speed: 2288 wps
+0.803 perplexity: 66.918 speed: 2273 wps
+0.903 perplexity: 65.008 speed: 2274 wps
+Epoch: 6 Train Perplexity: 64.178
+Epoch: 6 Valid Perplexity: 129.191
+VALID PERPLEXITY_+_+_++__+_
+129.190946895
+steps_taken
+1
+6
+lr_decay
+0.03125
+Epoch: 7 Learning rate: 0.031
+0.004 perplexity: 70.370 speed: 2176 wps
+0.104 perplexity: 67.823 speed: 2282 wps
+0.204 perplexity: 73.021 speed: 2286 wps
+0.304 perplexity: 69.741 speed: 2284 wps
+0.404 perplexity: 68.803 speed: 2285 wps
+0.504 perplexity: 67.542 speed: 2286 wps
+0.604 perplexity: 65.569 speed: 2286 wps
+0.703 perplexity: 64.690 speed: 2286 wps
+0.803 perplexity: 63.426 speed: 2287 wps
+0.903 perplexity: 61.568 speed: 2287 wps
+Epoch: 7 Train Perplexity: 60.783
+Epoch: 7 Valid Perplexity: 128.795
+VALID PERPLEXITY_+_+_++__+_
+128.7950059
+better performance
+7
+lr_decay
+0.015625
+Epoch: 8 Learning rate: 0.016
+0.004 perplexity: 72.104 speed: 2296 wps
+0.104 perplexity: 66.137 speed: 2296 wps
+0.204 perplexity: 71.174 speed: 2237 wps
+0.304 perplexity: 67.762 speed: 2256 wps
+0.404 perplexity: 66.823 speed: 2265 wps
+0.504 perplexity: 65.647 speed: 2268 wps
+0.604 perplexity: 63.700 speed: 2272 wps
+0.703 perplexity: 62.848 speed: 2274 wps
+0.803 perplexity: 61.541 speed: 2277 wps
+0.903 perplexity: 59.737 speed: 2280 wps
+Epoch: 8 Train Perplexity: 58.997
+Epoch: 8 Valid Perplexity: 128.690
+VALID PERPLEXITY_+_+_++__+_
+128.690315289
+better performance
+8
+lr_decay
+0.0078125
+Epoch: 9 Learning rate: 0.008
+0.004 perplexity: 73.607 speed: 2288 wps
+0.104 perplexity: 65.231 speed: 2284 wps
+0.204 perplexity: 70.135 speed: 2288 wps
+0.304 perplexity: 66.731 speed: 2289 wps
+0.404 perplexity: 65.872 speed: 2288 wps
+0.504 perplexity: 64.685 speed: 2289 wps
+0.604 perplexity: 62.720 speed: 2278 wps
+0.703 perplexity: 61.899 speed: 2273 wps
+0.803 perplexity: 60.533 speed: 2275 wps
+0.903 perplexity: 58.791 speed: 2276 wps
+Epoch: 9 Train Perplexity: 58.089
+Epoch: 9 Valid Perplexity: 128.588
+VALID PERPLEXITY_+_+_++__+_
+128.588334594
+better performance
+9
+lr_decay
+0.00390625
+Epoch: 10 Learning rate: 0.004
+0.004 perplexity: 69.370 speed: 2296 wps
+0.104 perplexity: 64.626 speed: 2289 wps
+0.204 perplexity: 69.604 speed: 2286 wps
+0.304 perplexity: 66.213 speed: 2288 wps
+0.404 perplexity: 65.286 speed: 2288 wps
+0.504 perplexity: 64.191 speed: 2287 wps
+0.604 perplexity: 62.186 speed: 2288 wps
+0.703 perplexity: 61.408 speed: 2288 wps
+0.803 perplexity: 59.986 speed: 2288 wps
+0.903 perplexity: 58.255 speed: 2288 wps
+Epoch: 10 Train Perplexity: 57.560
+Epoch: 10 Valid Perplexity: 128.566
+VALID PERPLEXITY_+_+_++__+_
+128.565560762
+better performance
+Test Perplexity: 124.635
+Train Time in Minutes: 70.416756467
+Saving model to ./runs/grucell.
+The score was:
+9
+Traceback (most recent call last):
+  File "ptb_word_lm.py", line 542, in <module>
+    tf.app.run()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv))
+  File "ptb_word_lm.py", line 538, in main
+    session, m, 'baseline_gru_batch_size_100_hidden_size_300.png')
+  File "ptb_word_lm.py", line 396, in visualize_tsne
+    fig, ax = plt.subplots()
+  File "/usr/lib/pymodules/python2.7/matplotlib/pyplot.py", line 1046, in subplots
+    fig = figure(**fig_kw)
+  File "/usr/lib/pymodules/python2.7/matplotlib/pyplot.py", line 423, in figure
+    **kwargs)
+  File "/usr/lib/pymodules/python2.7/matplotlib/backends/backend_tkagg.py", line 79, in new_figure_manager
+    return new_figure_manager_given_figure(num, figure)
+  File "/usr/lib/pymodules/python2.7/matplotlib/backends/backend_tkagg.py", line 87, in new_figure_manager_given_figure
+    window = Tk.Tk()
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1767, in __init__
+    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+_tkinter.TclError: no display name and no $DISPLAY environment variable
+ubuntu@ip-172-31-57-43:~/A3$ ls
+__init__.py  ptb_word_lm.py  reader.py  reader.pyc  rnn_cell.py  rnn_cell.pyc  runs  simple-examples
+ubuntu@ip-172-31-57-43:~/A3$ ls
+__init__.py  ptb_word_lm.py  reader.py  reader.pyc  rnn_cell.py  rnn_cell.pyc  runs  simple-examples
+ubuntu@ip-172-31-57-43:~/A3$ cd runs
+ubuntu@ip-172-31-57-43:~/A3/runs$ ls
+checkpoint  grucell  grucell-23230  grucell-23230.meta
+ubuntu@ip-172-31-57-43:~/A3/runs$ cd grucell/
+ubuntu@ip-172-31-57-43:~/A3/runs/grucell$ ls
+checkpoint                                      model.ckpt-13335       model.ckpt-16623.meta  model.ckpt-23230
+events.out.tfevents.1478303791.ip-172-31-57-43  model.ckpt-13335.meta  model.ckpt-19984       model.ckpt-23230.meta
+graph.pbtxt                                     model.ckpt-16623       model.ckpt-19984.meta
+ubuntu@ip-172-31-57-43:~/A3/runs/grucell$ cd ..
+ubuntu@ip-172-31-57-43:~/A3/runs$ zip -r grucell.zip grucell
+  adding: grucell/ (stored 0%)
+  adding: grucell/model.ckpt-16623 (deflated 7%)
+  adding: grucell/model.ckpt-13335 (deflated 7%)
+  adding: grucell/graph.pbtxt (deflated 88%)
+  adding: grucell/model.ckpt-19984.meta (deflated 71%)
+  adding: grucell/model.ckpt-23230 (deflated 7%)
+  adding: grucell/events.out.tfevents.1478303791.ip-172-31-57-43 (deflated 71%)
+  adding: grucell/model.ckpt-19984 (deflated 7%)
+  adding: grucell/model.ckpt-13335.meta (deflated 71%)
+  adding: grucell/model.ckpt-23230.meta (deflated 71%)
+  adding: grucell/model.ckpt-16623.meta (deflated 71%)
+  adding: grucell/checkpoint (deflated 71%)
+ubuntu@ip-172-31-57-43:~/A3/runs$ ls
+checkpoint  grucell  grucell-23230  grucell-23230.meta  grucell.zip
+ubuntu@ip-172-31-57-43:~/A3/runs$ ls
+checkpoint  grucell  grucell-23230  grucell-23230.meta  grucell.zip
+ubuntu@ip-172-31-57-43:~/A3/runs$ cd ..
+ubuntu@ip-172-31-57-43:~/A3$ ls
+__init__.py  ptb_word_lm.py  reader.py  reader.pyc  rnn_cell.py  rnn_cell.pyc  runs  simple-examples
+ubuntu@ip-172-31-57-43:~/A3$ nano rnn_cell.py
+ubuntu@ip-172-31-57-43:~/A3$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/lstm_no_out_gate
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcublas.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcufft.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcurand.so.7.5 locally
+E tensorflow/stream_executor/cuda/cuda_driver.cc:491] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:140] kernel driver does not appear to be running on this host (ip-172-31-57-43): /proc/driver/nvidia/version does not exist
+I tensorflow/core/common_runtime/gpu/gpu_init.cc:81] No GPU devices available on machine.
+0
+lr_decay
+1.0
+Epoch: 1 Learning rate: 1.000
+0.004 perplexity: 21267.981 speed: 1150 wps
+0.104 perplexity: 2466.793 speed: 2182 wps
+0.204 perplexity: 1243.427 speed: 2228 wps
+0.304 perplexity: 847.190 speed: 2243 wps
+0.404 perplexity: 669.149 speed: 2252 wps
+0.504 perplexity: 566.698 speed: 2256 wps
+0.604 perplexity: 492.739 speed: 2259 wps
+0.703 perplexity: 443.686 speed: 2261 wps
+0.803 perplexity: 407.214 speed: 2263 wps
+0.903 perplexity: 376.272 speed: 2264 wps
+Epoch: 1 Train Perplexity: 354.084
+Epoch: 1 Valid Perplexity: 217.894
+VALID PERPLEXITY_+_+_++__+_
+217.893778676
+steps_taken
+0
+1
+lr_decay
+1.0
+Epoch: 2 Learning rate: 1.000
+0.004 perplexity: 233.471 speed: 2272 wps
+0.104 perplexity: 182.402 speed: 2276 wps
+0.204 perplexity: 191.578 speed: 2275 wps
+0.304 perplexity: 184.880 speed: 2276 wps
+0.404 perplexity: 182.501 speed: 2276 wps
+0.504 perplexity: 179.379 speed: 2251 wps
+0.604 perplexity: 175.254 speed: 2255 wps
+0.703 perplexity: 173.297 speed: 2258 wps
+0.803 perplexity: 171.376 speed: 2259 wps
+0.903 perplexity: 168.368 speed: 2261 wps
+Epoch: 2 Train Perplexity: 167.104
+Epoch: 2 Valid Perplexity: 188.385
+VALID PERPLEXITY_+_+_++__+_
+188.384977754
+better performance
+2
+lr_decay
+0.5
+Epoch: 3 Learning rate: 0.500
+0.004 perplexity: 175.328 speed: 2267 wps
+0.104 perplexity: 129.145 speed: 2272 wps
+0.204 perplexity: 135.748 speed: 2270 wps
+0.304 perplexity: 129.549 speed: 2270 wps
+0.404 perplexity: 127.551 speed: 2277 wps
+0.504 perplexity: 124.766 speed: 2280 wps
+0.604 perplexity: 121.361 speed: 2281 wps
+0.703 perplexity: 119.461 speed: 2283 wps
+0.803 perplexity: 117.606 speed: 2284 wps
+0.903 perplexity: 114.790 speed: 2272 wps
+Epoch: 3 Train Perplexity: 113.433
+Epoch: 3 Valid Perplexity: 142.020
+VALID PERPLEXITY_+_+_++__+_
+142.019981747
+better performance
+3
+lr_decay
+0.25
+Epoch: 4 Learning rate: 0.250
+0.004 perplexity: 116.898 speed: 2267 wps
+0.104 perplexity: 93.525 speed: 2269 wps
+0.204 perplexity: 99.992 speed: 2267 wps
+0.304 perplexity: 95.483 speed: 2269 wps
+0.404 perplexity: 94.286 speed: 2270 wps
+0.504 perplexity: 92.343 speed: 2270 wps
+0.604 perplexity: 89.875 speed: 2270 wps
+0.703 perplexity: 88.553 speed: 2270 wps
+0.803 perplexity: 87.168 speed: 2270 wps
+0.903 perplexity: 84.872 speed: 2270 wps
+Epoch: 4 Train Perplexity: 83.746
+Epoch: 4 Valid Perplexity: 131.764
+VALID PERPLEXITY_+_+_++__+_
+131.763568691
+better performance
+4
+lr_decay
+0.125
+Epoch: 5 Learning rate: 0.125
+0.004 perplexity: 88.978 speed: 2281 wps
+0.104 perplexity: 77.889 speed: 2272 wps
+0.204 perplexity: 83.671 speed: 2270 wps
+0.304 perplexity: 79.960 speed: 2231 wps
+0.404 perplexity: 78.942 speed: 2241 wps
+0.504 perplexity: 77.311 speed: 2247 wps
+0.604 perplexity: 75.274 speed: 2250 wps
+0.703 perplexity: 74.216 speed: 2253 wps
+0.803 perplexity: 72.985 speed: 2255 wps
+0.903 perplexity: 70.928 speed: 2256 wps
+^CTraceback (most recent call last):
+  File "ptb_word_lm.py", line 542, in <module>
+    tf.app.run()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv))
+  File "ptb_word_lm.py", line 492, in main
+    verbose=True)
+  File "ptb_word_lm.py", line 344, in run_epoch
+    vals = session.run(fetches, feed_dict)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 710, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 908, in _run
+    feed_dict_string, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 958, in _do_run
+    target_list, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 965, in _do_call
+    return fn(*args)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 947, in _run_fn
+    status, run_metadata)
+KeyboardInterrupt
+ubuntu@ip-172-31-57-43:~/A3$ pip install sklearn
+Collecting sklearn
+/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+  SNIMissingWarning
+/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+  Downloading sklearn-0.0.tar.gz
+Requirement already satisfied (use --upgrade to upgrade): scikit-learn in /usr/local/lib/python2.7/dist-packages (from sklearn)
+Building wheels for collected packages: sklearn
+  Running setup.py bdist_wheel for sklearn ... done
+  Stored in directory: /home/ubuntu/.cache/pip/wheels/d7/db/a3/1b8041ab0be63b5c96c503df8e757cf205c2848cf9ef55f85e
+Successfully built sklearn
+Installing collected packages: sklearn
+Exception:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/commands/install.py", line 317, in run
+    prefix=options.prefix_path,
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/req/req_set.py", line 742, in install
+    **kwargs
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/req/req_install.py", line 831, in install
+    self.move_wheel_files(self.source_dir, root=root, prefix=prefix)
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/req/req_install.py", line 1032, in move_wheel_files
+    isolated=self.isolated,
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/wheel.py", line 346, in move_wheel_files
+    clobber(source, lib_dir, True)
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/wheel.py", line 317, in clobber
+    ensure_dir(destdir)
+  File "/usr/local/lib/python2.7/dist-packages/pip-8.1.2-py2.7.egg/pip/utils/__init__.py", line 83, in ensure_dir
+    os.makedirs(path)
+  File "/usr/lib/python2.7/os.py", line 157, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 13] Permission denied: '/usr/local/lib/python2.7/dist-packages/sklearn-0.0.dist-info'
+You are using pip version 8.1.2, however version 9.0.0 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+ubuntu@ip-172-31-57-43:~/A3$ pip list
+apt-xapian-index (0.45)
+awscli (1.10.63)
+backports.shutil-get-terminal-size (1.0.0)
+beautifulsoup4 (4.2.1)
+boto3 (1.1.1)
+botocore (1.4.53)
+certifi (2015.4.28)
+chardet (2.0.1)
+Cheetah (2.4.4)
+circus (0.14.0)
+cloud-init (0.7.5)
+colorama (0.2.5)
+configobj (4.7.2)
+configparser (3.5.0)
+cvxopt (1.1.4)
+decorator (3.4.0)
+docutils (0.12)
+entrypoints (0.2.2)
+enum34 (1.1.6)
+filelock (2.0.6)
+funcsigs (1.0.2)
+functools32 (3.2.3.post2)
+futures (2.2.0)
+grpcio (1.0.0)
+h5py (2.6.0)
+html5lib (0.999)
+iowait (0.2)
+ipykernel (4.5.0)
+ipython (5.1.0)
+ipython-genutils (0.1.0)
+ipywidgets (5.2.2)
+Jinja2 (2.7.2)
+jmespath (0.9.0)
+joblib (0.7.1)
+jsonpatch (1.3)
+jsonpointer (1.0)
+jsonschema (2.5.1)
+jupyter (1.0.0)
+jupyter-client (4.4.0)
+jupyter-console (5.0.0)
+jupyter-core (4.2.0)
+Keras (1.0.8)
+Landscape-Client (14.12)
+M2Crypto (0.21.1)
+MarkupSafe (0.18)
+matplotlib (1.3.1)
+midi (0.2.3)
+mistune (0.7.3)
+mock (2.0.0)
+msgpack-python (0.4.6)
+MySQL-python (1.2.3)
+nbconvert (4.2.0)
+nbformat (4.1.0)
+newrelic-api (1.0.4)
+nose (1.3.1)
+notebook (4.2.2)
+numexpr (2.2.2)
+numpy (1.11.1)
+oauth (1.0.1)
+openpyxl (1.7.0)
+PAM (0.4.2)
+pandas (0.13.1)
+pathlib2 (2.1.0)
+patsy (0.2.1)
+pbr (1.10.0)
+pexpect (4.2.1)
+pickleshare (0.7.4)
+Pillow (2.3.0)
+pip (8.1.2)
+pretty-midi (0.2.4)
+prettytable (0.7.2)
+prompt-toolkit (1.0.7)
+protobuf (3.0.0)
+psutil (4.3.1)
+ptyprocess (0.5.1)
+pyaml (16.9.0)
+pyasn1 (0.1.9)
+pycrypto (2.6.1)
+pycups (1.9.66)
+pycurl (7.19.3)
+pydot (1.0.28)
+Pygments (2.1.3)
+pygobject (3.12.0)
+pyOpenSSL (0.13)
+pyparsing (2.0.1)
+pyserial (2.6)
+pysmbc (1.0.14.1)
+python-apt (0.9.3.5ubuntu2)
+python-dateutil (2.5.3)
+python-debian (0.1.21-nmu2ubuntu2)
+pytz (2012rc0)
+PyYAML (3.12)
+pyzmq (14.0.1)
+qtconsole (4.2.1)
+requests (2.2.1)
+rsa (3.4.2)
+s3transfer (0.1.3)
+salt (2016.3.1)
+scikit-learn (0.17.1)
+scipy (0.13.3)
+setuptools (27.1.2)
+simplegeneric (0.8.1)
+simplejson (3.3.1)
+six (1.10.0)
+ssh-import-id (3.21)
+statsmodels (0.5.0)
+system-service (0.1.6)
+tables (3.1.1)
+tensorflow (0.10.0)
+terminado (0.6)
+tflearn (0.2.1)
+Theano (0.8.2)
+tornado (4.2.1)
+traitlets (4.3.0)
+Twisted-Core (13.2.0)
+Twisted-Names (13.2.0)
+Twisted-Web (13.2.0)
+urllib3 (1.7.1)
+virtualenv (15.0.3)
+wcwidth (0.1.7)
+wheel (0.29.0)
+widgetsnbextension (1.2.6)
+xlrd (0.9.2)
+xlwt (0.7.5)
+zope.interface (4.0.5)
+You are using pip version 8.1.2, however version 9.0.0 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+ubuntu@ip-172-31-57-43:~/A3$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/gru_25dc_mx2
+  File "ptb_word_lm.py", line 126
+    Code to train a GRU RNN
+          ^
+SyntaxError: invalid syntax
+ubuntu@ip-172-31-57-43:~/A3$ python ptb_word_lm.py --data_path=simple-examples/data/ --model small --save_path=./runs/gru_25dc_mx2
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcublas.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcufft.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:108] successfully opened CUDA library libcurand.so.7.5 locally
+E tensorflow/stream_executor/cuda/cuda_driver.cc:491] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:140] kernel driver does not appear to be running on this host (ip-172-31-57-43): /proc/driver/nvidia/version does not exist
+I tensorflow/core/common_runtime/gpu/gpu_init.cc:81] No GPU devices available on machine.
+i in max_epoch
+0
+lr_decay
+1.0
+Epoch: 1 Learning rate: 1.000
+0.004 perplexity: 23880.226 speed: 1186 wps
+0.104 perplexity: 2496.346 speed: 2196 wps
+0.204 perplexity: 1246.879 speed: 2243 wps
+0.304 perplexity: 851.341 speed: 2259 wps
+0.404 perplexity: 672.403 speed: 2268 wps
+0.504 perplexity: 569.581 speed: 2273 wps
+0.604 perplexity: 495.311 speed: 2275 wps
+0.703 perplexity: 446.082 speed: 2278 wps
+0.803 perplexity: 409.365 speed: 2279 wps
+0.903 perplexity: 378.143 speed: 2281 wps
+Epoch: 1 Train Perplexity: 355.766
+Epoch: 1 Valid Perplexity: 221.471
+VALID PERPLEXITY_+_+_++__+_
+221.471158631
+steps_taken
+0
+i in max_epoch
+1
+lr_decay
+1.0
+Epoch: 2 Learning rate: 1.000
+0.004 perplexity: 231.303 speed: 2292 wps
+0.104 perplexity: 184.826 speed: 2290 wps
+0.204 perplexity: 193.866 speed: 2287 wps
+0.304 perplexity: 187.184 speed: 2289 wps
+0.404 perplexity: 184.664 speed: 2289 wps
+0.504 perplexity: 181.659 speed: 2266 wps
+0.604 perplexity: 177.488 speed: 2270 wps
+0.703 perplexity: 175.852 speed: 2273 wps
+0.803 perplexity: 174.352 speed: 2275 wps
+0.903 perplexity: 171.545 speed: 2276 wps
+Epoch: 2 Train Perplexity: 170.618
+Epoch: 2 Valid Perplexity: 196.464
+VALID PERPLEXITY_+_+_++__+_
+196.464374495
+better performance
+i in max_epoch
+2
+lr_decay
+1.0
+Epoch: 3 Learning rate: 1.000
+0.004 perplexity: 192.550 speed: 2177 wps
+0.104 perplexity: 150.700 speed: 2289 wps
+0.204 perplexity: 162.370 speed: 2292 wps
+0.304 perplexity: 161.390 speed: 2290 wps
+0.404 perplexity: 167.892 speed: 2290 wps
+0.504 perplexity: 184.606 speed: 2290 wps
+0.604 perplexity: 207.697 speed: 2289 wps
+0.703 perplexity: 235.780 speed: 2290 wps
+0.803 perplexity: 265.724 speed: 2290 wps
+0.903 perplexity: 293.610 speed: 2277 wps
+Epoch: 3 Train Perplexity: 318.988
+Epoch: 3 Valid Perplexity: 748.618
+VALID PERPLEXITY_+_+_++__+_
+748.618122406
+steps_taken
+1
+i in max_epoch
+3
+lr_decay
+0.25
+Epoch: 4 Learning rate: 0.250
+0.004 perplexity: 742.799 speed: 2281 wps
+0.104 perplexity: 651.779 speed: 2288 wps
+0.204 perplexity: 655.103 speed: 2287 wps
+0.304 perplexity: 644.887 speed: 2288 wps
+0.404 perplexity: 638.328 speed: 2289 wps
+0.504 perplexity: 637.334 speed: 2287 wps
+0.604 perplexity: 635.363 speed: 2287 wps
+0.703 perplexity: 635.311 speed: 2287 wps
+0.803 perplexity: 635.501 speed: 2286 wps
+0.903 perplexity: 632.733 speed: 2287 wps
+Epoch: 4 Train Perplexity: 629.966
+Epoch: 4 Valid Perplexity: 637.889
+VALID PERPLEXITY_+_+_++__+_
+637.889297961
+better performance
+i in max_epoch
+4
+lr_decay
+0.0625
+Epoch: 5 Learning rate: 0.062
+0.004 perplexity: 609.238 speed: 2290 wps
+0.104 perplexity: 585.075 speed: 2286 wps
+0.204 perplexity: 597.255 speed: 2286 wps
+0.304 perplexity: 590.787 speed: 2286 wps
+0.404 perplexity: 588.062 speed: 2256 wps
+0.504 perplexity: 587.390 speed: 2260 wps
+0.604 perplexity: 580.681 speed: 2264 wps
+0.703 perplexity: 577.710 speed: 2267 wps
+0.803 perplexity: 575.231 speed: 2269 wps
+0.903 perplexity: 570.948 speed: 2271 wps
+Epoch: 5 Train Perplexity: 568.973
+Epoch: 5 Valid Perplexity: 574.202
+VALID PERPLEXITY_+_+_++__+_
+574.202429401
+better performance
+i in max_epoch
+5
+lr_decay
+0.015625
+Epoch: 6 Learning rate: 0.016
+0.004 perplexity: 563.384 speed: 2296 wps
+0.104 perplexity: 537.095 speed: 2292 wps
+0.204 perplexity: 544.251 speed: 2285 wps
+0.304 perplexity: 542.334 speed: 2288 wps
+0.404 perplexity: 540.680 speed: 2289 wps
+0.504 perplexity: 544.253 speed: 2288 wps
+0.604 perplexity: 541.378 speed: 2288 wps
+0.703 perplexity: 542.031 speed: 2288 wps
+0.803 perplexity: 542.502 speed: 2273 wps
+0.903 perplexity: 539.825 speed: 2275 wps
+Epoch: 6 Train Perplexity: 539.955
+Epoch: 6 Valid Perplexity: 572.198
+VALID PERPLEXITY_+_+_++__+_
+572.197628096
+better performance
+i in max_epoch
+6
+lr_decay
+0.00390625
+Epoch: 7 Learning rate: 0.004
+0.004 perplexity: 554.042 speed: 2284 wps
+0.104 perplexity: 523.369 speed: 2282 wps
+0.204 perplexity: 533.889 speed: 2285 wps
+0.304 perplexity: 531.906 speed: 2286 wps
+0.404 perplexity: 530.902 speed: 2285 wps
+0.504 perplexity: 534.896 speed: 2285 wps
+0.604 perplexity: 531.911 speed: 2285 wps
+0.703 perplexity: 533.830 speed: 2285 wps
+0.803 perplexity: 534.396 speed: 2285 wps
+0.903 perplexity: 532.257 speed: 2285 wps
+Epoch: 7 Train Perplexity: 532.048
+Epoch: 7 Valid Perplexity: 563.119
+VALID PERPLEXITY_+_+_++__+_
+563.118850258
+better performance
+i in max_epoch
+7
+lr_decay
+0.0009765625
+Epoch: 8 Learning rate: 0.001
+0.004 perplexity: 669.121 speed: 2279 wps
+0.104 perplexity: 524.086 speed: 2285 wps
+0.204 perplexity: 532.007 speed: 2229 wps
+0.304 perplexity: 530.779 speed: 2249 wps
+0.404 perplexity: 529.929 speed: 2258 wps
+0.504 perplexity: 532.917 speed: 2263 wps
+0.604 perplexity: 529.579 speed: 2268 wps
+0.703 perplexity: 530.975 speed: 2271 wps
+0.803 perplexity: 531.278 speed: 2273 wps
+0.903 perplexity: 529.133 speed: 2275 wps
+Epoch: 8 Train Perplexity: 529.464
+Epoch: 8 Valid Perplexity: 564.259
+VALID PERPLEXITY_+_+_++__+_
+564.25899874
+steps_taken
+1
+i in max_epoch
+8
+lr_decay
+0.000244140625
+Epoch: 9 Learning rate: 0.000
+0.004 perplexity: 631.090 speed: 2279 wps
+0.104 perplexity: 523.145 speed: 2281 wps
+0.204 perplexity: 530.738 speed: 2286 wps
+0.304 perplexity: 529.145 speed: 2286 wps
+0.404 perplexity: 527.736 speed: 2285 wps
+0.504 perplexity: 531.204 speed: 2286 wps
+0.604 perplexity: 528.711 speed: 2286 wps
+0.703 perplexity: 530.669 speed: 2268 wps
+0.803 perplexity: 531.220 speed: 2271 wps
+0.903 perplexity: 529.746 speed: 2272 wps
+Epoch: 9 Train Perplexity: 530.383
+Epoch: 9 Valid Perplexity: 559.993
+VALID PERPLEXITY_+_+_++__+_
+559.992695265
+better performance
+i in max_epoch
+9
+lr_decay
+6.103515625e-05
+Epoch: 10 Learning rate: 0.000
+0.004 perplexity: 595.933 speed: 2277 wps
+0.104 perplexity: 517.693 speed: 2290 wps
+0.204 perplexity: 528.812 speed: 2288 wps
+0.304 perplexity: 527.716 speed: 2287 wps
+0.404 perplexity: 526.900 speed: 2288 wps
+0.504 perplexity: 531.685 speed: 2287 wps
+0.604 perplexity: 529.092 speed: 2287 wps
+0.703 perplexity: 531.340 speed: 2287 wps
+0.803 perplexity: 530.815 speed: 2287 wps
+0.903 perplexity: 528.973 speed: 2287 wps
+Epoch: 10 Train Perplexity: 529.853
+Epoch: 10 Valid Perplexity: 561.143
+VALID PERPLEXITY_+_+_++__+_
+561.143251294
+steps_taken
+1
+Test Perplexity: 536.039
+Train Time in Minutes: 70.3539622307
+Saving model to ./runs/gru_25dc_mx2.
+The score was:
+8
+Traceback (most recent call last):
+  File "ptb_word_lm.py", line 543, in <module>
+    tf.app.run()
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/platform/app.py", line 30, in run
+    sys.exit(main(sys.argv))
+  File "ptb_word_lm.py", line 539, in main
+    session, m, 'gru_0.25decay_max2.png')
+  File "ptb_word_lm.py", line 396, in visualize_tsne
+    fig, ax = plt.subplots()
+  File "/usr/lib/pymodules/python2.7/matplotlib/pyplot.py", line 1046, in subplots
+    fig = figure(**fig_kw)
+  File "/usr/lib/pymodules/python2.7/matplotlib/pyplot.py", line 423, in figure
+    **kwargs)
+  File "/usr/lib/pymodules/python2.7/matplotlib/backends/backend_tkagg.py", line 79, in new_figure_manager
+    return new_figure_manager_given_figure(num, figure)
+  File "/usr/lib/pymodules/python2.7/matplotlib/backends/backend_tkagg.py", line 87, in new_figure_manager_given_figure
+    window = Tk.Tk()
+  File "/usr/lib/python2.7/lib-tk/Tkinter.py", line 1767, in __init__
+    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+_tkinter.TclError: no display name and no $DISPLAY environment variable
+ubuntu@ip-172-31-57-43:~/A3$ 

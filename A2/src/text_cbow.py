@@ -69,6 +69,9 @@ class cbow(object):
             b = tf.Variable(tf.constant(0.1, shape=[num_classes]), name="b")
             l2_loss += tf.nn.l2_loss(W)
             l2_loss += tf.nn.l2_loss(b)
+            print self.hidden_1.get_shape()
+            print W.get_shape()
+            print b.get_shape()
             self.scores = tf.nn.xw_plus_b(self.h_drop_1, W, b, name="scores")
             self.predictions = tf.argmax(self.scores, 1, name="predictions")
 
