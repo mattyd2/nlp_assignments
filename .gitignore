@@ -1,9 +1,14 @@
+A1/data/
 A1/runs/
+
 A2/src/runs/
 A2/src/data/
-A1/data/
-test/runs/
+
 A2/data/
+A2/consol outputs
+A2/src/model.vec
+A2/src/model.bin
+
 A3_2/
 A3/ptb/runs/
 A3/ptb/simple-examples/
@@ -15,11 +20,9 @@ A2/Terminal Saved Output
 *.pyc
 .DS_store
 *.bin
-
-A2/src/model.bin
-
 *.vec
 
-A2/consol outputs
+A4/runs/
 
-A2/src/model.vec
+
+test/runs/
