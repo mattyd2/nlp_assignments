@@ -25,6 +25,7 @@ import sys
 import time
 import pdb
 import pandas as pd
+import nltk
 
 import tensorflow.python.platform
 
@@ -101,6 +102,16 @@ FLAGS = tf.app.flags.FLAGS
 # , (70, 80), (180, 198)] # TODO: maybe filter out long sentences?
 _buckets = [(5, 10), (10, 15), (20, 25), (50, 50)]
 
+
+# get most recent eval ppx
+def shouldStop(ar, numSteps=4):
+    isIncreasing = True
+    for i in range(1, numSteps+1):
+        isIncreasing *= (np.mean(ar, axis=0)[-i] < np.mean(ar, axis=0)[-1])
+        print ('\n Next One')
+        print ('current', np.mean(ar, axis=0)[-1], 'previous ', i, np.mean(ar, axis=0)[-i])
+        print ('(np.mean(ar, axis=0)[-i] < np.mean(ar, axis=0)[-1])', (np.mean(ar, axis=0)[-i] < np.mean(ar, axis=0)[-1]))
+    return isIncreasing
 
 def read_data(source_path, target_path, max_size=None):
     """Read data from source and target files and put into buckets.
@@ -243,17 +254,13 @@ def train():
                 # times.
                 if len(previous_losses) > 2 and loss > max(previous_losses[-3:]):
                     sess.run(model.learning_rate_decay_op)
-                # quit if havent improved over 6 runs
-                if len(previous_losses) > 2 and loss > max(previous_losses[-6:]):
-                    print("havent improved in 6 steps")
-                    break
-                previous_losses.append(loss)
                 # Save checkpoint and zero timer and loss.
                 checkpoint_path = os.path.join(
                     FLAGS.train_dir, "translate.ckpt")
                 model.saver.save(sess, checkpoint_path,
                                  global_step=model.global_step)
                 step_time, loss = 0.0, 0.0
+
                 # Run evals on development set and print their perplexity.
                 for bucket_id, bucket_list in zip(xrange(len(_buckets)), buckets):
                     encoder_inputs, decoder_inputs, target_weights = model.get_batch(
@@ -265,10 +272,16 @@ def train():
                     print("  eval: bucket %d perplexity %.2f" %
                           (bucket_id, eval_ppx))
                     bucket_list.append(eval_ppx)
+
+            # write out results
             data = {'bucket_0': buckets[0], 'bucket_1': buckets[1], 'bucket_2': buckets[2],
                     'bucket_3': buckets[3], 'train_perplex': train_perplex, 'steps': steps}
             df = pd.DataFrame(data)
             df.to_csv('./metrics.csv')
+            if len(buckets[0]) > 4:
+                if shouldStop(buckets, 4) is True:
+                    print("Early stopping because the last ")
+                    break
             sys.stdout.flush()
 
 
@@ -348,6 +361,7 @@ def bleuScorer():
         badJapaneseTranslationAsNumbers = []
         bleuScores = []
 
+        print("Reading in Sentences")
         for sentence in sentencesEnglish:
             print("sentence in coming ", sentence)
             token_ids = data_utils.sentence_to_token_ids(
@@ -415,8 +429,8 @@ def self_test():
 def main(_):
     if FLAGS.self_test:
         self_test()
-    elif FLAGS.decode:
-        decode()
+    elif FLAGS.bleuScore:
+        bleuScorer()
     else:
         train()
 
